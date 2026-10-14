@@ -32,7 +32,7 @@
             <div class="nav-right">
 
                 <!-- Search bar -->
-                    <form class = "search-form" action = "#" method = "get">
+                    <form class = "search-form" action = "" method = "get">
                         <input type = "search" name = "search" placeholder = "Search products..." aria-label = "Search products">
                             <button type = "submit" class = "search-button" aria-label = "Search">
                                 <svg viewBox = "0 0 24 24" aria-hidden = "true">
@@ -105,6 +105,8 @@
                 menuToggle.setAttribute("aria-expanded", "false");
             }
         });
+
+        document.querySelector(".search-form").addEventListener("submit", (e) => {e.preventDefault();}); /*remove after building real search function*/
     </script>
 
 </body>
