@@ -3,17 +3,22 @@
    GLOBAL STYLES
 ========================= */
 
+
 :root {
-    --navy: #111e2c;
-    --navy-light: #1c2c3e;
-    --green: #35ff7f;
-    --yellow: #ffff29;
-    --text: #101f38;
-    --muted: #566985;
-    --white: #ffffff;
-    --light-bg: #f5f8fc;
-    --border: #dce6f2;
+    --navy: #183D2B;
+    --navy-light: #285B3D;
+
+    --blue: #F28C28;
+    --blue-dark: #D96F12;
+
+    --text: #1D3024;
+    --muted: #657568;
+
+    --white: #FFFFFF;
+    --light-bg: #F7F8F2;
+    --border: #DCE5D9;
 }
+
 
 * {
     margin: 0;
@@ -247,15 +252,19 @@ img {
     transform: scale(1);
 }
 
+
+/* Dark green overlay over the hero images */
 .hero-overlay {
     background: linear-gradient(
         90deg,
-        rgba(8, 19, 31, 0.95) 0%,
-        rgba(8, 19, 31, 0.78) 40%,
-        rgba(8, 19, 31, 0.20) 100%
+        rgba(13, 39, 26, 0.95) 0%,
+        rgba(13, 39, 26, 0.78) 42%,
+        rgba(13, 39, 26, 0.18) 100%
     );
     z-index: 1;
 }
+
+/* Orange headline highlight */
 
 .hero-content {
     position: relative;
@@ -263,7 +272,14 @@ img {
     width: min(650px, 80%);
     margin-left: 9%;
     padding: 60px 0;
+    color: #FFFFFF;
 }
+
+
+.hero-content h1 span {
+    color: #F9A044;
+}
+
 
 .hero-content h1 {
     max-width: 650px;
@@ -274,7 +290,7 @@ img {
 }
 
 .hero-content h1 span {
-    color: #64b5ff;
+    color: var(--blue);
 }
 
 .hero-description {
@@ -422,6 +438,7 @@ img {
     box-shadow: 0 12px 30px rgba(20, 60, 110, 0.09);
 }
 
+
 .service-icon {
     width: 68px;
     height: 68px;
@@ -429,11 +446,12 @@ img {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background: #e6f2ff;
-    color: var(--blue);
+    background: #FFF0DD;
+    color: #D96F12;
     font-size: 35px;
     font-weight: 700;
 }
+
 
 .service-card h3 {
     font-size: 18px;
@@ -493,6 +511,7 @@ img {
     min-width: 0;
 }
 
+
 .about-image-wrapper::before {
     content: "";
     position: absolute;
@@ -500,9 +519,10 @@ img {
     right: -15px;
     width: 55%;
     height: 55%;
-    background: #d7eaff;
+    background: #F9DFC0;
     border-radius: 12px;
 }
+
 
 .about-image {
     position: relative;
