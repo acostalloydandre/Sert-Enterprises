@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sert Enterprise - Home</title>
 
+    <!-- Body CSS -->
     <link rel="stylesheet" href="./CSS/index.css">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <!-- Hero Section CSS-->
+    <link rel="stylesheet" href="./CSS/hero-section.css">
+    <!-- Responsiveness -->
+    <link rel="stylesheet" href="./CSS/index-responsive.css">
+    
 </head>
+
 <body>
 
     <header class="navbar">
@@ -21,10 +31,12 @@
         <nav class="nav-menu" id="navMenu">
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="">Our Services</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contacts</a></li>
-                <li><a href="">Dashboard</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Industries</a></li>
+                <li><a href="">Materials</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Service Area</a></li>
+                <li><a href="">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -64,7 +76,26 @@
 
     <!-- Main content -->
     <main>
-        <section class="hero">
+        <section class="hero-section">
+            <!-- Slideshow Images -->
+             <img src = "Assets/Banner/banner 1.webp" alt="Provincial Tourism and Cultural Affairs Office" class="slideshow-image">
+             <img src = "Assets/Banner/banner 2.webp" alt="Aventus Medical Care Inc." class="slideshow-image">
+             <img src = "Assets/Banner/banner 3.webp" alt="Smilee Apparel" class="slideshow-image">
+             <img src = "Assets/Banner/banner 4.webp" alt="Real Casa" class="slideshow-image">
+             <img src = "Assets/Banner/banner 5.webp" alt="Wellness Hub" class="slideshow-image">
+             <img src = "Assets/Banner/banner 6.webp" alt="Subaru Dealership" class="slideshow-image">
+             <img src = "Assets/Banner/banner 7.webp" alt="Fruitas" class="slideshow-image">
+
+            <!-- Overlay -->
+            <div class = "banner-overlay"></div>
+
+            <!-- Content: Heading, Tagline, and Button -->
+            <div class="banner-content">
+                <span class="eyebrow">SERT Enterprise</span>
+                <h1 class="main-heading">Crafting Quality<span class="accent">Creating Impact</span></h1>
+                <p class="tagline">Your Vision, Our Craft — From Signage to Complete Interior Solutions.</p>
+                <a href="./html/products.html" class="btn-get-started">Explore our Service <span aria-hidden="true">&rarr;</span></a>
+            </div>
         </section>
     </main>
 
