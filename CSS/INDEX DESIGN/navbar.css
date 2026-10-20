@@ -245,3 +245,170 @@
     stroke-linecap: round;
     stroke-linejoin: round;
 }
+
+@media (max-width: 1200px) {
+    .navbar {
+        padding-inline: 3%;
+    }
+
+    .logo-image {
+        width: 160px;
+    }
+    
+
+    .nav-links {
+        gap: clamp(14px, 1.6vw, 24px);
+    }
+
+    .nav-links a 
+    { 
+        font-size: 15px;
+    }
+
+    .search-form {
+        width: 210px;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) 
+{
+    .navbar 
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .nav-menu 
+    {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        padding: 12px 5% 20px;
+        background:  #F5F3ED;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-menu.show 
+    {
+        display: block;
+    }
+
+    .nav-links 
+    {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links a 
+    {
+        padding: 14px 4px;
+        color: #14532D;
+    }
+
+    .nav-right 
+    {
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    .search-form 
+    {
+        width: clamp(120px, 24vw, 200px);
+    }
+
+    .menu-toggle 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        padding: 9px;
+
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .menu-toggle span 
+    {
+        width: 100%;
+        height: 2px;
+        background: #14532D;
+        border-radius: 2px;
+    }
+}
+/* Small mobile phones */
+@media (max-width: 480px) 
+{
+    .navbar 
+    {
+        padding-inline: 12px;
+        gap: 8px;
+    }
+
+    .logo-image 
+    {
+        width: 105px;
+    }
+
+    /* Compact search field */
+    .search-form 
+    {
+        width: 38px;
+        height: 38px;
+        border: none;
+        background: transparent;
+    }
+
+    .search-form input 
+    {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .search-button 
+    {
+        width: 38px;
+        height: 38px;
+        padding: 9px;
+    }
+
+    .nav-right 
+    {
+        gap: 4px;
+    }
+
+    .profile-link 
+    {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-toggle 
+    {
+        width: 36px;
+        height: 36px;
+        padding: 7px;
+    }
+    
+}

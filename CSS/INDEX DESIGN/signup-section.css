@@ -1,0 +1,428 @@
+/* ---------------------------------------------------------
+   SECTION + LAYOUT
+--------------------------------------------------------- */
+
+.signup-section {
+    position: relative;
+    width: 100%;
+    padding: 70px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.signup-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0 20px 50px rgba(18, 60, 45, 0.18);
+}
+
+
+/* ---------------------------------------------------------
+   LEFT: GLASS SIGNUP FORM
+--------------------------------------------------------- */
+
+.signup-card {
+    min-width: 0;
+    max-width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+
+    /* centers the form if the right panel is taller */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* glass */
+    background: rgba(255, 255, 255, 0.35);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+            backdrop-filter: blur(10px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-right: none;
+    border-radius: 16px 0 0 16px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.signup-header {
+    margin-bottom: 30px;
+}
+
+.signup-header h1 {
+    margin: 0 0 9px;
+    color: #173f35;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.signup-header p {
+    margin: 0;
+    color: #4a524d;
+    font-size: 14px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #29332e;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Inputs and textarea share one design */
+.form-group input,
+.form-group textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.55);
+    color: #26352e;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.form-group input {
+    height: 46px;
+    padding: 0 13px;
+}
+
+.form-group textarea {
+    display: block;
+    min-height: 110px;
+    padding: 12px 13px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #7a807c;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: #356b56;
+    box-shadow: 0 0 0 3px rgba(53, 107, 86, 0.10);
+}
+
+.marketing-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: #4a524d;
+    font-size: 12px;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.marketing-option input {
+    margin-top: 2px;
+    accent-color: #173f35;
+}
+
+.signup-button {
+    width: 100%;
+    min-height: 47px;
+    border: none;
+    border-radius: 6px;
+    background: #173f35;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.signup-button:hover {
+    background: #245747;
+    transform: translateY(-1px);
+}
+
+.signup-terms {
+    margin: -5px 0 0;
+    color: #4a524d;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.login-prompt {
+    margin: -7px 0 0;
+    color: #4a524d;
+    font-size: 13px;
+    text-align: center;
+}
+
+.signup-terms a,
+.login-prompt a {
+    color: #1c5945;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-terms a:hover,
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT: GREEN PANEL (customer account info)
+--------------------------------------------------------- */
+
+.signup-info {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-width: 0;
+    max-width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background: #123c32;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    color: #ffffff;
+    border-radius: 0 16px 16px 0;
+}
+
+/* Faded logo in the top-right corner */
+.signup-bg-logo {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.09;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.signup-info > :not(.signup-bg-logo) {
+    position: relative;
+    z-index: 1;
+}
+
+/* ----- Text ----- */
+
+.cx-content {
+    margin-bottom: 28px;
+}
+
+.cx-label {
+    display: block;
+    margin-bottom: 17px;
+    color: #d97a1c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+.cx-content h2 {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: clamp(26px, 2.6vw, 34px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.cx-intro {
+    max-width: 430px;
+    margin: 0 0 24px;
+    color: #d2dfd8;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ----- Accordion ----- */
+
+.cx-accordion {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cx-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cx-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 2px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+}
+
+.cx-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Chevron */
+.cx-item summary::after {
+    content: "";
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(45deg);
+    transition: transform 0.25s ease;
+}
+
+.cx-item[open] summary::after {
+    transform: rotate(-135deg);
+}
+
+.cx-item summary:hover {
+    color: #d97a1c;
+}
+
+.cx-item summary:focus-visible {
+    outline: 2px solid #d97a1c;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.cx-item p {
+    max-width: 480px;
+    padding: 0 2px 20px;
+    color: #c3d3cb;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ----- Smooth open / close ----- */
+
+.cx-accordion {
+    interpolate-size: allow-keywords;   /* lets height animate to "auto" */
+}
+
+.cx-item::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+        block-size 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease,
+        content-visibility 0.4s allow-discrete;
+}
+
+.cx-item[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+}
+
+/* ----- Illustration at the bottom of the panel ----- */
+
+.cx-frame {
+    margin-top: auto;               /* pins it to the bottom */
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+}
+
+.cx-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center 60%;
+    background: #1d5240;            /* shows while the image loads */
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .signup-layout {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 900px) {
+    .signup-section {
+        padding: 40px 16px;
+    }
+
+    .signup-layout {
+        grid-template-columns: 1fr;
+        border-radius: 16px;
+        box-shadow: 0 15px 40px rgba(18, 60, 45, 0.15);
+    }
+
+    .signup-card {
+        border-right: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 16px 16px 0 0;
+    }
+
+    .signup-info {
+        border-radius: 0 0 16px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-section {
+        padding: 30px 12px;
+    }
+
+    .signup-card,
+    .signup-info {
+        padding: 24px 20px;
+    }
+
+    .signup-header h1 {
+        font-size: 26px;
+        letter-spacing: -0.5px;
+    }
+
+    .signup-header p {
+        font-size: 13px;
+    }
+
+    .cx-content h2 {
+        font-size: 22px;
+        letter-spacing: -0.5px;
+    }
+
+    .cx-intro {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .cx-item summary {
+        font-size: 15px;
+        padding: 14px 2px;
+    }
+}

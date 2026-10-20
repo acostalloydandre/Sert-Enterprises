@@ -14,11 +14,22 @@
     <link rel="stylesheet" href="./CSS/INDEX DESIGN/navbar.css">
     <!-- Hero Section CSS-->
     <link rel="stylesheet" href="./CSS/INDEX DESIGN/hero-section.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="./CSS/INDEX DESIGN/main.css">
+    <!-- Partners Section CSS -->
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/partners-section.css">
+    <!-- Services Section CSS -->
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/services-section.css">
+    <!-- Workflow Section CSS -->
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/workflow-section.css">
+    <!-- Signup Section CSS -->
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/signup-section.css">
+    <!-- Feature Work Section CSS -->
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/featureworks-section.css">
+    <!-- Feedback Section CSS -->
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/feedback-section.css">
     <!-- Responsiveness -->
     <link rel="stylesheet" href="./CSS/INDEX DESIGN/index-responsive.css">
 
+    
     <script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
@@ -36,8 +47,7 @@
         <nav class="nav-menu" id="navMenu">
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Products</a></li>
+                <li><a href="">Services & Products</a></li>
                 <li><a href="">About Us</a></li>
                 <li><a href="">Contact Us</a></li>
             </ul>
@@ -98,14 +108,14 @@
                 <div class="banner-content">
                     <span class="eyebrow">SERT Enterprise</span>
                     <h1 class="main-heading">Signage, Printing, and Interior/Fit-out Supply & Installation</span></h1>
-                    <p class="tagline">Create an account to order products, avail services, track order requests and
-                        projects. <br> Contact us for more inquiries. </p>
+                    <p class="tagline">Create an account to order products, avail services, request customization, and
+                        track projects <br> Contact us for more inquiries. </p>
 
                     <div class="hero-actions">
                         <a href="" class="btn-quote"> Create an Account </a>
                         <a href="tel:+634806137014" class="btn-phone"> (02) 577-4292 </a>
                     </div>
-                    <a href="" class="reviews-link"> Read Our Customer Reviews <span aria-hidden="true">&rarr;</span>
+                    <a href="#testimonials" class="reviews-link"> Read Our Customer Reviews <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
 
@@ -489,48 +499,49 @@
             </div>
         </section>
 
-        <section class="signup-section">
+        <section class="signup-section" id = "signup">
             <div class="signup-layout">
-        
+
                 <!-- LEFT: SIGNUP FORM -->
                 <div class="signup-card">
                     <div class="signup-header">
-                        <h1>Create account</h1>
-                        <p>Join SERT Enterprise today.</p>
+                        <h1>Create an Account</h1>
+                        <p>Create a free account and manage everything with us in one place,
+                            from the first order to the final delivery.</p>
                     </div>
-        
+
                     <form class="signup-form" action="#" method="post">
-        
+
                         <div class="form-group">
                             <label for="signup-email">Email address</label>
                             <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email"
                                 autocomplete="email" required>
                         </div>
-        
+
                         <div class="form-group">
                             <label for="signup-name">Name</label>
                             <input type="text" id="signup-name" name="signup-name" placeholder="Enter your Full Name"
                                 autocomplete="name" required>
                         </div>
-        
+
                         <div class="form-group">
                             <label for="signup-password">Password</label>
-                            <input type="password" id="signup-password" name="signup-password" placeholder="Create a password"
-                                autocomplete="new-password" minlength="8" required>
+                            <input type="password" id="signup-password" name="signup-password"
+                                placeholder="Create a password" autocomplete="new-password" minlength="8" required>
                         </div>
-        
+
                         <div class="form-group">
                             <label for="signup-phone">Phone Number</label>
                             <input type="tel" id="signup-phone" name="signup-phone" placeholder="Enter Phone Number"
                                 autocomplete="tel" required>
                         </div>
-        
+
                         <div class="form-group">
                             <label for="signup-address">Address</label>
-                            <textarea id="signup-address" name="signup-address" placeholder="Enter Complete Address" rows="3"
-                                autocomplete="street-address" required></textarea>
+                            <textarea id="signup-address" name="signup-address" placeholder="Enter Complete Address"
+                                rows="3" autocomplete="street-address" required></textarea>
                         </div>
-        
+
                         <label class="marketing-option">
                             <input type="checkbox" name="marketing">
                             <span>
@@ -538,57 +549,57 @@
                                 and promotions.
                             </span>
                         </label>
-        
+
                         <button type="submit" class="signup-button">
                             Create account
                         </button>
-        
+
                         <p class="signup-terms">
                             By creating an account, you agree to our
                             <a href="terms.html">Terms of Service</a>
                             and <a href="privacy.html">Privacy Policy</a>.
                         </p>
-        
+
                         <p class="login-prompt">
                             Already have an account?
                             <a href="login.html">Log in</a>
                         </p>
                     </form>
                 </div>
-        
+
                 <!-- RIGHT: CUSTOMER ACCOUNT INFO (was the welcome panel) -->
                 <aside class="signup-info">
-        
+
                     <img src="./Assets/Logo/logofigure.png" alt="SERT Enterprise Logo" class="signup-bg-logo">
-        
+
                     <div class="cx-content">
-                        <span class="cx-label">CUSTOMER ACCOUNT</span>
+                        <span class="cx-label">WANT SOMETHING CUSTOMIZED AND INSTALLED?</span>
                         <h2>One dashboard for your orders and projects</h2>
                         <p class="cx-intro">
-                            Create a free account and manage everything with us in one place,
-                            from the first order to the final delivery.
+                            SERT Enterprise also allows customization of products! If you want a product to have specific customized propertied or design.
+                            Let us know by creating an account.
                         </p>
-        
+
                         <div class="cx-accordion">
-        
+
                             <details class="cx-item" name="cx-features" open>
                                 <summary>Order a product</summary>
                                 <p>
-                                    Browse our products, choose your specifications and place an order
-                                    from your dashboard. Your past orders are saved, so reordering
-                                    takes a few clicks.
+                                    Browse our products, customize your preferred designs, materials, colors, and dimensions, 
+                                    and submit a customization request directly from your dashboard. Track your request and 
+                                    manage your orders in one convenient place.
                                 </p>
                             </details>
-        
+
                             <details class="cx-item" name="cx-features">
                                 <summary>Request a service</summary>
                                 <p>
-                                    Need printing, fabrication or installation? Send a service request
+                                    Need printing, customization, fabrication or installation? Send a service request
                                     with your details and files, and we will reply with a quote you can
                                     review in your account.
                                 </p>
                             </details>
-        
+
                             <details class="cx-item" name="cx-features">
                                 <summary>Track your projects</summary>
                                 <p>
@@ -596,7 +607,7 @@
                                     current stage, so you always know what is being worked on.
                                 </p>
                             </details>
-        
+
                             <details class="cx-item" name="cx-features">
                                 <summary>Get project status notifications</summary>
                                 <p>
@@ -605,7 +616,7 @@
                                     completion, so you never have to ask for an update.
                                 </p>
                             </details>
-        
+
                             <details class="cx-item" name="cx-features">
                                 <summary>Check delivery status</summary>
                                 <p>
@@ -613,10 +624,10 @@
                                     the expected arrival date without having to call or message us.
                                 </p>
                             </details>
-        
+
                         </div>
                     </div>
-        
+
                     <!-- Illustration at the bottom of the panel -->
                     <div class="cx-frame">
                         <img src="Assets/Misc/cx-account.svg"
@@ -624,12 +635,12 @@
                             width="800" height="600" loading="lazy">
                     </div>
                 </aside>
-        
+
             </div>
-        
+
         </section>
-        
-        
+
+
         <section class="fw-section" id="featured-work">
 
             <div class="fw-header">
@@ -665,8 +676,8 @@
                         <!-- 2. Panaflex Signage -->
                         <article class="fw-card">
                             <div class="fw-photo">
-                                <img src="Assets/Featured Works/panaflex.webp" alt="Panaflex signage project" width="760"
-                                    height="570" loading="lazy" draggable="false">
+                                <img src="Assets/Featured Works/panaflex.webp" alt="Panaflex signage project"
+                                    width="760" height="570" loading="lazy" draggable="false">
                             </div>
                             <div class="fw-body">
                                 <span class="fw-tag">PANAFLEX SIGNAGE</span>
@@ -691,8 +702,8 @@
                         <!-- 4. Metal Works -->
                         <article class="fw-card">
                             <div class="fw-photo">
-                                <img src="Assets/Featured Works/metal.webp" alt="Metal works project" width="760" height="570"
-                                    loading="lazy" draggable="false">
+                                <img src="Assets/Featured Works/metal.webp" alt="Metal works project" width="760"
+                                    height="570" loading="lazy" draggable="false">
                             </div>
                             <div class="fw-body">
                                 <span class="fw-tag">METAL WORKS</span>
@@ -704,8 +715,8 @@
                         <!-- 5. Wood Works -->
                         <article class="fw-card">
                             <div class="fw-photo">
-                                <img src="Assets/Featured Works/wood.webp" alt="Wood works project" width="760" height="570"
-                                    loading="lazy" draggable="false">
+                                <img src="Assets/Featured Works/wood.webp" alt="Wood works project" width="760"
+                                    height="570" loading="lazy" draggable="false">
                             </div>
                             <div class="fw-body">
                                 <span class="fw-tag">WOOD WORKS</span>
@@ -717,8 +728,8 @@
                         <!-- 6. Window Blinds -->
                         <article class="fw-card">
                             <div class="fw-photo">
-                                <img src="Assets/Featured Works/windowbinds.webp" alt="Window blinds project" width="760"
-                                    height="570" loading="lazy" draggable="false">
+                                <img src="Assets/Featured Works/windowbinds.webp" alt="Window blinds project"
+                                    width="760" height="570" loading="lazy" draggable="false">
                             </div>
                             <div class="fw-body">
                                 <span class="fw-tag">WINDOW BLINDS</span>
@@ -730,8 +741,8 @@
                         <!-- 7. Carpets -->
                         <article class="fw-card">
                             <div class="fw-photo">
-                                <img src="Assets/Featured Works/carpets.webp" alt="Carpet installation project" width="760"
-                                    height="570" loading="lazy" draggable="false">
+                                <img src="Assets/Featured Works/carpets.webp" alt="Carpet installation project"
+                                    width="760" height="570" loading="lazy" draggable="false">
                             </div>
                             <div class="fw-body">
                                 <span class="fw-tag">CARPETS</span>
@@ -743,8 +754,9 @@
                         <!-- 8. Office Furniture & Partitions -->
                         <article class="fw-card">
                             <div class="fw-photo">
-                                <img src="Assets/Featured Works/office.webp" alt="Office furniture and partitions project"
-                                    width="760" height="570" loading="lazy" draggable="false">
+                                <img src="Assets/Featured Works/office.webp"
+                                    alt="Office furniture and partitions project" width="760" height="570"
+                                    loading="lazy" draggable="false">
                             </div>
                             <div class="fw-body">
                                 <span class="fw-tag">OFFICE FURNITURE &amp; PARTITIONS</span>
@@ -762,13 +774,185 @@
             </div>
 
         </section>
+
+        <section class="feedback-section" id="testimonials">
+            <div class="feedback-container">
+
+                <!-- Header -->
+                <div class="feedback-header">
+                    <div class="feedback-heading">
+                        <span class="feedback-label">TESTIMONIALS</span>
+                        <h2>What Our Customers Say</h2>
+                    </div>
+                    <p class="feedback-intro">
+                        We take pride in every project we deliver. Here is what our
+                        clients say about working with us.
+                    </p>
+                </div>
+
+                <!-- Cards -->
+                <div class="feedback-grid">
+
+                    <article class="feedback-card">
+
+                        <div class="feedback-media">
+                            <img src="Assets/Testimonials/panaflex signage.webp" alt="Storefront Signage Project" loading="lazy">
+                        </div>
+
+                        <blockquote>
+                            <p>
+                                Our new storefront signage was installed on schedule and looks
+                                even better than the mockup. The team handled everything, from
+                                design to installation.
+                            </p>
+                        </blockquote>
+                        <footer class="feedback-footer">
+                            <span class="feedback-avatar" aria-hidden="true">CN</span>
+                            <div class="feedback-person">
+                                <strong>Client Name</strong>
+                                <span>Owner, Company Name</span>
+                            </div>
+                            <span class="feedback-rating" aria-label="Rated 5.0 out of 5">
+                                5.0 <i aria-hidden="true">&#9733;</i> Rating
+                            </span>
+                        </footer>
+                    </article>
+
+                    <article class="feedback-card">
+
+                        <div class="feedback-media">
+                            <img src="Assets/Testimonials/metal works.webp" alt="Storefront Signage Project" loading="lazy">
+                        </div>
+                        
+                        <blockquote>
+                            <p>
+                                The acrylic and metal works for our lobby came out clean and
+                                precise. The finishing is excellent, and they kept us updated
+                                at every step.
+                            </p>
+                        </blockquote>
+                        <footer class="feedback-footer">
+                            <span class="feedback-avatar" aria-hidden="true">CN</span>
+                            <div class="feedback-person">
+                                <strong>Client Name</strong>
+                                <span>Manager, Company Name</span>
+                            </div>
+                            <span class="feedback-rating" aria-label="Rated 5.0 out of 5">
+                                5.0 <i aria-hidden="true">&#9733;</i> Rating
+                            </span>
+                        </footer>
+                    </article>
+
+                    <article class="feedback-card">
+
+                        <div class="feedback-media">
+                            <img src="Assets/Testimonials/cubicle office.webp" alt="Storefront Signage Project" loading="lazy">
+                        </div>
+                        
+                        <blockquote>
+                            <p>
+                                We ordered office partitions and carpets for a full floor.
+                                Delivery was well organized and the fit-out was done with
+                                minimal disruption.
+                            </p>
+                        </blockquote>
+                        <footer class="feedback-footer">
+                            <span class="feedback-avatar" aria-hidden="true">CN</span>
+                            <div class="feedback-person">
+                                <strong>Client Name</strong>
+                                <span>Operations Head, Company Name</span>
+                            </div>
+                            <span class="feedback-rating" aria-label="Rated 5.0 out of 5">
+                                5.0 <i aria-hidden="true">&#9733;</i> Rating
+                            </span>
+                        </footer>
+                    </article>
+
+                    <article class="feedback-card">
+
+                        <div class="feedback-media">
+                            <img src="Assets/Testimonials/largeprint.webp" alt="Storefront Signage Project" loading="lazy">
+                        </div>
+                        
+                        <blockquote>
+                            <p>
+                                Large format prints for our shop were sharp and vibrant, and
+                                ready a day early. We will definitely order from them again.
+                            </p>
+                        </blockquote>
+                        <footer class="feedback-footer">
+                            <span class="feedback-avatar" aria-hidden="true">CN</span>
+                            <div class="feedback-person">
+                                <strong>Client Name</strong>
+                                <span>Marketing Lead, Company Name</span>
+                            </div>
+                            <span class="feedback-rating" aria-label="Rated 5.0 out of 5">
+                                5.0 <i aria-hidden="true">&#9733;</i> Rating
+                            </span>
+                        </footer>
+                    </article>
+
+                    <article class="feedback-card">
+
+                        <div class="feedback-media">
+                            <img src="Assets/Testimonials/subaru logo.webp" alt="Storefront Signage Project" loading="lazy">
+                        </div>
+                        
+                        <blockquote>
+                            <p>
+                                Tracking our request through the customer account made the
+                                whole process easy. We always knew which stage our project
+                                was in.
+                            </p>
+                        </blockquote>
+                        <footer class="feedback-footer">
+                            <span class="feedback-avatar" aria-hidden="true">CN</span>
+                            <div class="feedback-person">
+                                <strong>Client Name</strong>
+                                <span>Facilities Manager, Company Name</span>
+                            </div>
+                            <span class="feedback-rating" aria-label="Rated 5.0 out of 5">
+                                5.0 <i aria-hidden="true">&#9733;</i> Rating
+                            </span>
+                        </footer>
+                    </article>
+
+                    <article class="feedback-card">
+
+                        <div class="feedback-media">
+                            <img src="Assets/Testimonials/woodwork and window blinds.webp" alt="Storefront Signage Project" loading="lazy">
+                        </div>
+                        
+                        <blockquote>
+                            <p>
+                                Custom wood works and window blinds matched our brief exactly.
+                                Communication was quick and the quality is consistent across
+                                every piece.
+                            </p>
+                        </blockquote>
+                        <footer class="feedback-footer">
+                            <span class="feedback-avatar" aria-hidden="true">CN</span>
+                            <div class="feedback-person">
+                                <strong>Client Name</strong>
+                                <span>Owner, Company Name</span>
+                            </div>
+                            <span class="feedback-rating" aria-label="Rated 5.0 out of 5">
+                                5.0 <i aria-hidden="true">&#9733;</i> Rating
+                            </span>
+                        </footer>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="footer">
 
     </footer>
-    <script src = "JS/index.js"></script>
+    <script src="JS/index.js"></script>
 </body>
 
 </html>

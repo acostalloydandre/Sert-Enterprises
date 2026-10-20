@@ -1,0 +1,233 @@
+/* =========================================
+   WORKFLOW SECTION
+========================================= */
+
+.workflow-section {
+    width: 100%;
+    padding: 90px 6%;
+    background: #123c2d;
+    color: #ffffff;
+    border-radius: 0px;
+}
+
+.workflow-container {
+    width: 100%;
+    max-width: 1184px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.45fr;
+    align-items: start;
+    gap: 65px;
+}
+
+/* =========================================
+   LEFT INTRODUCTION
+========================================= */
+
+.workflow-intro {
+    padding-top: 2px;
+}
+
+.workflow-label {
+    display: block;
+    margin-bottom: 16px;
+
+    color: #d97a1c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.workflow-intro h2 {
+    margin: 0 0 24px;
+
+    color: #ffffff;
+    font-size: clamp(32px, 3.2vw, 42px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1.7px;
+}
+
+.workflow-intro h2 span {
+    display: block;
+    color: #ffffff;
+}
+
+.workflow-intro p {
+    margin: 0 0 18px;
+
+    color: #b8bbcf;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   WORKFLOW GRID
+========================================= */
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* =========================================
+   WORKFLOW CARDS
+========================================= */
+
+.workflow-card {
+    position: relative;
+    min-width: 0;
+    min-height: 232px;
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: #123c2d;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 13px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.workflow-card:hover {
+    transform: translateY(-5px);
+    background: #19523e;
+    border-color: #d97a1c;
+}
+
+/* Number */
+
+.workflow-number {
+    display: block;
+    margin-bottom: 22px;
+
+    color: #d97a1c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* Icon */
+
+.workflow-icon {
+    display: none;
+}
+
+/* Card heading */
+
+.workflow-card h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+}
+
+/* Card description */
+
+.workflow-card p {
+    margin: 0 0 20px;
+
+    color: #b8bbcf;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* Card bottom text */
+
+.workflow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: auto;
+
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.workflow-link span {
+    transition: transform 0.25s ease;
+}
+
+.workflow-card:hover .workflow-link span {
+    transform: translateX(4px);
+}
+
+.partners-section + .priority-section {
+    padding-top: 0;
+  }
+
+  @media (max-width: 1200px) {
+    .workflow-container {
+        max-width: 960px;
+        gap: 45px;
+    }
+}
+
+@media (max-width: 900px) {
+    .workflow-section {
+        padding: 60px 4%;
+    }
+
+    .workflow-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .workflow-intro h2 {
+        font-size: clamp(26px, 4vw, 36px);
+        letter-spacing: -1px;
+    }
+
+    .workflow-card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .workflow-section {
+        padding: 40px 16px;
+    }
+
+    .workflow-intro h2 {
+        font-size: 24px;
+        letter-spacing: -0.5px;
+        margin-bottom: 16px;
+    }
+
+    .workflow-intro p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .workflow-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .workflow-card {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .workflow-card h3 {
+        font-size: 18px;
+    }
+
+    .workflow-card p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
