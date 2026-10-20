@@ -5,7 +5,7 @@
 .workflow-section {
     width: 100%;
     padding: 90px 6%;
-    background: #123c2d;
+    background-color: #123c2d;
     color: #ffffff;
     border-radius: 0px;
 }
@@ -197,8 +197,22 @@
 }
 
 @media (max-width: 480px) {
+
+    .workflow-container, 
+    .workflow-content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .workflow-header, 
+    .workflow-section
+    { 
+        padding: 0 20px;
+        text-align: left;
+    }
+
     .workflow-section {
-        padding: 40px 16px;
+        padding: 40px 16px !important;
     }
 
     .workflow-intro h2 {
