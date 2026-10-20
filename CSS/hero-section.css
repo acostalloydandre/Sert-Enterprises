@@ -131,6 +131,232 @@
     outline-offset: 3px;
   }
 
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+    margin-bottom: 20px;
+}
+
+/* Get a Free Quote button */
+.btn-quote {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 0 26px;
+    background: #d97a1c;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    border: 1px solid #d97a1c;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-quote:hover {
+    background: #d6a52a;
+    border-color: #d6a52a;
+    transform: translateY(-2px);
+}
+
+/* Phone number button */
+.btn-phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 0 26px;
+    background: rgba(0, 0, 0, 0.12);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.btn-phone:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+}
+
+/* Customer reviews link */
+.reviews-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 9px;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-bottom: 2px solid #d97a1c;
+    transition: gap 0.3s, color 0.3s;
+}
+
+.reviews-link span {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.reviews-link:hover {
+    gap: 14px;
+    color: #f2f2f2;
+}
+
+/* Keyboard accessibility */
+.btn-quote:focus-visible,
+.btn-phone:focus-visible,
+.reviews-link:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
+/* Two-column hero layout */
+.hero-layout {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px clamp(24px, 6.7vw, 110px);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  align-items: center;
+  gap: clamp(35px, 5vw, 80px);
+}
+
+/* Left-side banner content */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0;
+  color: #fff;
+}
+
+.banner-content .main-heading {
+  font-size: clamp(2rem, 3.2vw, 3.5rem);
+}
+
+.banner-content .tagline {
+  margin-bottom: 24px;
+}
+
+/* Form container on the right */
+.hero-form-wrapper {
+  width: 100%;
+  min-width: 0;
+  max-height: calc(100vh - 145px);
+  overflow-y: auto;
+  border-radius: 18px;
+  scrollbar-width: thin;
+  scrollbar-color: #c5cbd4 transparent;
+}
+
+/* White form card */
+.hero-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: clamp(22px, 2.2vw, 34px);
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.form-eyebrow {
+  color: #d97a1c;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.hero-contact-form h2 {
+  margin: -5px 0 5px;
+  color: #14172f;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  line-height: 1.2;
+}
+
+.hero-contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.hero-contact-form .form-group label {
+  color: #344258;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.hero-contact-form input,
+.hero-contact-form select,
+.hero-contact-form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #d1d9e3;
+  border-radius: 7px;
+  background: #fff;
+  color: #263449;
+  font: inherit;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.hero-contact-form input,
+.hero-contact-form select {
+  min-height: 44px;
+}
+
+.hero-contact-form textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.hero-contact-form input:focus,
+.hero-contact-form select:focus,
+.hero-contact-form textarea:focus {
+  border-color: #123c2d;
+  box-shadow: 0 0 0 3px rgba(18, 60, 45, 0.1);
+}
+
+/* Red submit button */
+.hero-submit-button {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: none;
+  border-radius: 8px;
+  background: #d97a1c;
+  color: #fff;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero-submit-button:hover {
+  background: #d6a52a;
+}
+
+
 /* Smaller desktop and laptop */
 @media (max-width: 1200px) 
 {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -8,14 +9,18 @@
     <title>Sert Enterprise - Home</title>
 
     <!-- Body CSS -->
-    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/index.css">
     <!-- Navbar CSS -->
-    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/navbar.css">
     <!-- Hero Section CSS-->
-    <link rel="stylesheet" href="./CSS/hero-section.css">
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/hero-section.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/main.css">
     <!-- Responsiveness -->
-    <link rel="stylesheet" href="./CSS/index-responsive.css">
-    
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/index-responsive.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 
 <body>
@@ -32,41 +37,39 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="">Services</a></li>
-                <li><a href="">Industries</a></li>
-                <li><a href="">Materials</a></li>
                 <li><a href="">Products</a></li>
-                <li><a href="">Service Area</a></li>
+                <li><a href="">About Us</a></li>
                 <li><a href="">Contact Us</a></li>
             </ul>
         </nav>
 
         <!-- Right: Search bar & Login-->
-            <div class="nav-right">
+        <div class="nav-right">
 
-                <!-- Search bar -->
-                    <form class = "search-form" action = "" method = "get">
-                        <input type = "search" name = "search" placeholder = "Search products..." aria-label = "Search products">
-                            <button type = "submit" class = "search-button" aria-label = "Search">
-                                <svg viewBox = "0 0 24 24" aria-hidden = "true">
-                                    <circle cx = "11" cy = "11" r = "7"></circle>
-                                    <path d = "m16 16 4 4"></path>
-                                </svg>
-                            </button>
-                        </form>
-            
-                <!-- Login -->
-                    <a href="login.html" class="profile-link"
-                        aria-label="Log in to your account" title="Log in">
-            
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <circle cx="12" cy="8" r="4"></circle>
-                            <path d="M4 21v-2a8 8 0 0 1 16 0v2z"></path>
-                        </svg>
-                    </a>
-            </div>  
-            
+            <!-- Search bar -->
+            <form class="search-form" action="" method="get">
+                <input type="search" name="search" placeholder="Search products..." aria-label="Search products">
+                <button type="submit" class="search-button" aria-label="Search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m16 16 4 4"></path>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Login -->
+            <a href="login.html" class="profile-link" aria-label="Log in to your account" title="Log in">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21v-2a8 8 0 0 1 16 0v2z"></path>
+                </svg>
+            </a>
+        </div>
+
         <!-- Mobile menu button -->
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" type="button">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="navMenu" type="button">
             <span></span>
             <span></span>
             <span></span>
@@ -78,67 +81,694 @@
     <main>
         <section class="hero-section">
             <!-- Slideshow Images -->
-             <img src = "Assets/Banner/banner 1.webp" alt="Provincial Tourism and Cultural Affairs Office" class="slideshow-image">
-             <img src = "Assets/Banner/banner 2.webp" alt="Aventus Medical Care Inc." class="slideshow-image">
-             <img src = "Assets/Banner/banner 3.webp" alt="Smilee Apparel" class="slideshow-image">
-             <img src = "Assets/Banner/banner 4.webp" alt="Real Casa" class="slideshow-image">
-             <img src = "Assets/Banner/banner 5.webp" alt="Wellness Hub" class="slideshow-image">
-             <img src = "Assets/Banner/banner 6.webp" alt="Subaru Dealership" class="slideshow-image">
-             <img src = "Assets/Banner/banner 7.webp" alt="Fruitas" class="slideshow-image">
+            <img src="Assets/Banner/banner 1.webp" alt="Provincial Tourism and Cultural Affairs Office"
+                class="slideshow-image">
+            <img src="Assets/Banner/banner 2.webp" alt="Aventus Medical Care Inc." class="slideshow-image">
+            <img src="Assets/Banner/banner 3.webp" alt="Smilee Apparel" class="slideshow-image">
+            <img src="Assets/Banner/banner 4.webp" alt="Real Casa" class="slideshow-image">
+            <img src="Assets/Banner/banner 5.webp" alt="Wellness Hub" class="slideshow-image">
+            <img src="Assets/Banner/banner 6.webp" alt="Subaru Dealership" class="slideshow-image">
+            <img src="Assets/Banner/banner 7.webp" alt="Fruitas" class="slideshow-image">
 
             <!-- Overlay -->
-            <div class = "banner-overlay"></div>
+            <div class="banner-overlay"></div>
 
-            <!-- Content: Heading, Tagline, and Button -->
-            <div class="banner-content">
-                <span class="eyebrow">SERT Enterprise</span>
-                <h1 class="main-heading">Crafting Quality<span class="accent">Creating Impact</span></h1>
-                <p class="tagline">Your Vision, Our Craft — From Signage to Complete Interior Solutions.</p>
-                <a href="./html/products.html" class="btn-get-started">Explore our Service <span aria-hidden="true">&rarr;</span></a>
+            <div class="hero-layout">
+                <!-- Content: Heading, Tagline, and Button -->
+                <div class="banner-content">
+                    <span class="eyebrow">SERT Enterprise</span>
+                    <h1 class="main-heading">Signage, Printing, and Interior/Fit-out Supply & Installation</span></h1>
+                    <p class="tagline">Create an account to order products, avail services, track order requests and
+                        projects. <br> Contact us for more inquiries. </p>
+
+                    <div class="hero-actions">
+                        <a href="" class="btn-quote"> Create an Account </a>
+                        <a href="tel:+634806137014" class="btn-phone"> (02) 577-4292 </a>
+                    </div>
+                    <a href="" class="reviews-link"> Read Our Customer Reviews <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+
+                <div class="hero-form-wrapper">
+                    <form class="hero-contact-form" id="heroContactForm">
+
+                        <span class="form-eyebrow">CONSULTATION REQUEST</span>
+
+                        <h2>Tell us about your project.</h2>
+
+                        <div class="form-group">
+                            <label for="heroName">Full Name *</label>
+                            <input type="text" id="heroName" name="fullName" placeholder="Enter your full name"
+                                autocomplete="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heroBusiness">Business Name</label>
+                            <input type="text" id="heroBusiness" name="businessName"
+                                placeholder="Enter your business name" autocomplete="organization">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heroEmail">Email Address *</label>
+                            <input type="email" id="heroEmail" name="email" placeholder="juandelacruz@gmail.com"
+                                autocomplete="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heroPhone">Phone Number *</label>
+                            <input type="tel" id="heroPhone" name="phone" placeholder="Enter your phone number"
+                                autocomplete="tel" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heroSignType">Sign / Service Type</label>
+                            <select id="heroSignType" name="signType">
+                                <option value="">Select a service</option>
+                                <option value="Signage">Signage</option>
+                                <option value="Printing">Printing</option>
+                                <option value="Interior Fit-out">Interior / Fit-out</option>
+                                <option value="Supply and Installation">
+                                    Supply and Installation
+                                </option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heroDetails">Project Details *</label>
+                            <textarea id="heroDetails" name="projectDetails" rows="3"
+                                placeholder="Tell us about your project..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="hero-submit-button">
+                            Submit Request
+                            <span aria-hidden="true">&rarr;</span>
+                        </button>
+
+                    </form>
+                </div>
+        </section>
+
+        <section class="partners-section">
+            <div class="partners-heading">
+                <h2>Our Trusted Partners</h2>
+                <p>We work with Philippines Top Companies</p>
             </div>
+
+            <div class="logo-marquee">
+                <div class="logo-track" id="logoTrack">
+                    <div class="logo-item"><img src="Assets/Customer Logo/2go.png" alt="2GO" width="145" height="100">
+                    </div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/anker.png" alt="Anker" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/army navy.png" alt="Army Navy" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/aventus.png" alt="Aventus" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/buko loco.png" alt="Buko Loco" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/chawadicup.png" alt="Chawadicup" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/cheapid.png" alt="Cheapid" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/coco.png" alt="Coco" width="145" height="100">
+                    </div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/fruitas.png" alt="Fruitas" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/garmin.png" alt="Garmin" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/generika.png" alt="Generika" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/jamaican.png" alt="Jamaican" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/john lemon.png" alt="John Lemon" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/juice avenue.png" alt="Juice Avenue"
+                            width="145" height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/la petite academy.png" alt="La Petite Academy"
+                            width="145" height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/lawson.png" alt="Lawson" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/makati shangri-la.png" alt="Makati Shangri-La"
+                            width="145" height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/pdm.png" alt="PDM" width="145" height="100">
+                    </div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/peninsula.png" alt="Peninsula" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/pirelli.png" alt="Pirelli" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/primark.png" alt="Primark" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/psbank.png" alt="PSBank" width="145"
+                            height="100"></div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/rcbc.png" alt="RCBC" width="145" height="100">
+                    </div>
+                    <div class="logo-item"><img src="Assets/Customer Logo/wilcore.png" alt="Wilcore" width="145"
+                            height="100"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="priority-section">
+
+            <!-- Section Heading -->
+            <div class="section-header">
+                <span class="section-label">PRIORITY PROJECTS</span>
+
+                <h1>WHAT SERVICES WE OFFER</h1>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="projects-grid">
+
+                <!-- Card 1 -->
+                <article class="project-card">
+                    <img src="Assets/Services/largeprint.webp" alt="Exterior property identification sign"
+                        class="project-image">
+
+                    <div class="project-content">
+                        <span class="project-category">LARGE FORMAT PRINTING</span>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+
+                        <a href="exterior-signs.html" class="project-link">
+                            Explore Indoor & Outdoor Media <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="project-card">
+                    <img src="Assets/Services/panaflex.webp" alt="Interior office signage" class="project-image">
+
+                    <div class="project-content">
+                        <span class="project-category">PANAFLEX SIGNAGE</span>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+
+                        <a href="interior-signs.html" class="project-link">
+                            Explore Photoflex Print / Sticker Cut <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="project-card">
+                    <img src="Assets/Services/acrylic.webp" alt="Commercial property entrance sign"
+                        class="project-image">
+
+                    <div class="project-content">
+                        <span class="project-category">ACRYLIC WORKS</span>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+
+                        <a href="property-signs.html" class="project-link">
+                            Explore Acrylic Works <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="project-card">
+                    <img src="Assets/Services/metal.webp" alt="Commercial vehicles with branded graphics"
+                        class="project-image">
+
+                    <div class="project-content">
+                        <span class="project-category">METAL WORKS</span>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+
+                        <a href="fleet-branding.html" class="project-link">
+                            Explore Metal Works <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- Card 5 -->
+                <article class="project-card">
+                    <img src="Assets/Services/kiosk.webp" alt="Commercial vehicles with branded graphics"
+                        class="project-image">
+
+                    <div class="project-content">
+                        <span class="project-category">WOOD WORKS</span>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+
+                        <a href="fleet-branding.html" class="project-link">
+                            Explore Wood Works <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- Card 6 -->
+                <article class="project-card">
+                    <img src="Assets/Services/blind1.webp" alt="Commercial vehicles with branded graphics"
+                        class="project-image">
+
+                    <div class="project-content">
+                        <span class="project-category">WINDOW BINDS</span>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+
+                        <a href="fleet-branding.html" class="project-link">
+                            Explore Window Binds <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- Card 7 -->
+                <article class="project-card">
+                    <img src="Assets/Services/carpet2.webp" alt="Commercial vehicles with branded graphics"
+                        class="project-image">
+
+                    <div class="project-content">
+                        <span class="project-category">CARPETS</span>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+
+                        <a href="fleet-branding.html" class="project-link">
+                            Explore Carpets <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- Card 8 -->
+                <article class="project-card">
+                    <img src="Assets/Services/cubicle.webp" alt="Commercial vehicles with branded graphics"
+                        class="project-image">
+
+                    <div class="project-content">
+                        <span class="project-category">OFFICE FURNITURE & PARTITIONS</span>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+
+                        <a href="fleet-branding.html" class="project-link">
+                            Explore Furniture & Partitions <span>→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SERT ENTERPRISE WORKFLOW SECTION -->
+        <section class="workflow-section">
+
+            <div class="workflow-container">
+
+                <!-- LEFT: INTRODUCTION -->
+                <div class="workflow-intro">
+
+                    <span class="workflow-label">OUR WORKFLOW</span>
+
+                    <h2>
+                        From Initial Ideas To
+                        <span>Final Installation.</span>
+                    </h2>
+
+                    <p>
+                        At SERT Enterprise, we turn creative ideas into
+                        high-quality signage and furniture solutions.
+                        Every project follows a coordinated process,
+                        from planning and design to fabrication and
+                        final installation.
+                    </p>
+
+                    <p>
+                        Our team brings every stage together to ensure
+                        quality workmanship, efficient execution, and
+                        results that meet your business needs.
+                    </p>
+
+                </div>
+
+                <!-- RIGHT: WORKFLOW CARDS -->
+                <div class="workflow-grid">
+
+                    <!-- STEP 1 -->
+                    <article class="workflow-card">
+                        <span class="workflow-number">01</span>
+
+                        <div class="workflow-icon">✦</div>
+
+                        <h3>Marketing Ideas</h3>
+
+                        <p>
+                            Brainstorming concepts and identifying
+                            the right direction for your project.
+                        </p>
+
+                        <span class="workflow-link">
+                            Concept Development <span>→</span>
+                        </span>
+                    </article>
+
+                    <!-- STEP 2 -->
+                    <article class="workflow-card">
+                        <span class="workflow-number">02</span>
+
+                        <div class="workflow-icon">✎</div>
+
+                        <h3>Graphic Design &amp; Presentation</h3>
+
+                        <p>
+                            Visual concepts, creative layouts, and
+                            3D proposals to help visualize the result.
+                        </p>
+
+                        <span class="workflow-link">
+                            Design &amp; Visualization <span>→</span>
+                        </span>
+                    </article>
+
+                    <!-- STEP 3 -->
+                    <article class="workflow-card">
+                        <span class="workflow-number">03</span>
+
+                        <div class="workflow-icon">⚙</div>
+
+                        <h3>Fabrication &amp; Execution</h3>
+
+                        <p>
+                            Printing, welding, carpentry, laser cutting,
+                            painting, and LED lighting.
+                        </p>
+
+                        <span class="workflow-link">
+                            Production &amp; Quality <span>→</span>
+                        </span>
+                    </article>
+
+                    <!-- STEP 4 -->
+                    <article class="workflow-card">
+                        <span class="workflow-number">04</span>
+
+                        <div class="workflow-icon">✓</div>
+
+                        <h3>Installation &amp; Delivery</h3>
+
+                        <p>
+                            Delivering finished products and completing
+                            installation with attention to detail.
+                        </p>
+
+                        <span class="workflow-link">
+                            Project Completion <span>→</span>
+                        </span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="signup-section">
+            <div class="signup-layout">
+        
+                <!-- LEFT: SIGNUP FORM -->
+                <div class="signup-card">
+                    <div class="signup-header">
+                        <h1>Create account</h1>
+                        <p>Join SERT Enterprise today.</p>
+                    </div>
+        
+                    <form class="signup-form" action="#" method="post">
+        
+                        <div class="form-group">
+                            <label for="signup-email">Email address</label>
+                            <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email"
+                                autocomplete="email" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="signup-name">Name</label>
+                            <input type="text" id="signup-name" name="signup-name" placeholder="Enter your Full Name"
+                                autocomplete="name" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="signup-password" placeholder="Create a password"
+                                autocomplete="new-password" minlength="8" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="signup-phone">Phone Number</label>
+                            <input type="tel" id="signup-phone" name="signup-phone" placeholder="Enter Phone Number"
+                                autocomplete="tel" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="signup-address">Address</label>
+                            <textarea id="signup-address" name="signup-address" placeholder="Enter Complete Address" rows="3"
+                                autocomplete="street-address" required></textarea>
+                        </div>
+        
+                        <label class="marketing-option">
+                            <input type="checkbox" name="marketing">
+                            <span>
+                                I would like to receive updates, offers,
+                                and promotions.
+                            </span>
+                        </label>
+        
+                        <button type="submit" class="signup-button">
+                            Create account
+                        </button>
+        
+                        <p class="signup-terms">
+                            By creating an account, you agree to our
+                            <a href="terms.html">Terms of Service</a>
+                            and <a href="privacy.html">Privacy Policy</a>.
+                        </p>
+        
+                        <p class="login-prompt">
+                            Already have an account?
+                            <a href="login.html">Log in</a>
+                        </p>
+                    </form>
+                </div>
+        
+                <!-- RIGHT: CUSTOMER ACCOUNT INFO (was the welcome panel) -->
+                <aside class="signup-info">
+        
+                    <img src="./Assets/Logo/logofigure.png" alt="SERT Enterprise Logo" class="signup-bg-logo">
+        
+                    <div class="cx-content">
+                        <span class="cx-label">CUSTOMER ACCOUNT</span>
+                        <h2>One dashboard for your orders and projects</h2>
+                        <p class="cx-intro">
+                            Create a free account and manage everything with us in one place,
+                            from the first order to the final delivery.
+                        </p>
+        
+                        <div class="cx-accordion">
+        
+                            <details class="cx-item" name="cx-features" open>
+                                <summary>Order a product</summary>
+                                <p>
+                                    Browse our products, choose your specifications and place an order
+                                    from your dashboard. Your past orders are saved, so reordering
+                                    takes a few clicks.
+                                </p>
+                            </details>
+        
+                            <details class="cx-item" name="cx-features">
+                                <summary>Request a service</summary>
+                                <p>
+                                    Need printing, fabrication or installation? Send a service request
+                                    with your details and files, and we will reply with a quote you can
+                                    review in your account.
+                                </p>
+                            </details>
+        
+                            <details class="cx-item" name="cx-features">
+                                <summary>Track your projects</summary>
+                                <p>
+                                    See every project from approval to completion. Each one shows its
+                                    current stage, so you always know what is being worked on.
+                                </p>
+                            </details>
+        
+                            <details class="cx-item" name="cx-features">
+                                <summary>Get project status notifications</summary>
+                                <p>
+                                    Once you request a service, you will receive a notification every
+                                    time its status changes, from approval and production to
+                                    completion, so you never have to ask for an update.
+                                </p>
+                            </details>
+        
+                            <details class="cx-item" name="cx-features">
+                                <summary>Check delivery status</summary>
+                                <p>
+                                    Follow your order as it is packed, shipped and delivered, and see
+                                    the expected arrival date without having to call or message us.
+                                </p>
+                            </details>
+        
+                        </div>
+                    </div>
+        
+                    <!-- Illustration at the bottom of the panel -->
+                    <div class="cx-frame">
+                        <img src="Assets/Misc/cx-account.svg"
+                            alt="Customer dashboard with project progress, delivery tracking and a status notification"
+                            width="800" height="600" loading="lazy">
+                    </div>
+                </aside>
+        
+            </div>
+        
+        </section>
+        
+        
+        <section class="fw-section" id="featured-work">
+
+            <div class="fw-header">
+                <span class="fw-label">FEATURED WORK</span>
+                <h2>Projects we have delivered</h2>
+                <p>
+                    One finished project from each of our services, from signage and
+                    printing to furniture and fit-outs.
+                </p>
+            </div>
+
+            <div class="fw-carousel">
+
+                <button type="button" class="fw-arrow fw-arrow--prev" aria-label="Previous project">&#8592;</button>
+
+                <div class="fw-viewport" tabindex="0" role="region" aria-roledescription="carousel"
+                    aria-label="Featured projects">
+                    <div class="fw-track">
+
+                        <!-- 1. Large Format Printing -->
+                        <article class="fw-card">
+                            <div class="fw-photo">
+                                <img src="Assets/Featured Works/largeprint.webp" alt="Large format printing project"
+                                    width="760" height="570" loading="lazy" draggable="false">
+                            </div>
+                            <div class="fw-body">
+                                <span class="fw-tag">LARGE FORMAT PRINTING</span>
+                                <h3 class="fw-link">Lorem Ipsum</a></h3>
+                                <p>Client name &middot; Location</p>
+                            </div>
+                        </article>
+
+                        <!-- 2. Panaflex Signage -->
+                        <article class="fw-card">
+                            <div class="fw-photo">
+                                <img src="Assets/Featured Works/panaflex.webp" alt="Panaflex signage project" width="760"
+                                    height="570" loading="lazy" draggable="false">
+                            </div>
+                            <div class="fw-body">
+                                <span class="fw-tag">PANAFLEX SIGNAGE</span>
+                                <h3 class="fw-link">Lorem Ipsum</h3>
+                                <p>Client name &middot; Location</p>
+                            </div>
+                        </article>
+
+                        <!-- 3. Acrylic Works -->
+                        <article class="fw-card">
+                            <div class="fw-photo">
+                                <img src="Assets/Featured Works/acrylic.webp" alt="Acrylic works project" width="760"
+                                    height="570" loading="lazy" draggable="false">
+                            </div>
+                            <div class="fw-body">
+                                <span class="fw-tag">ACRYLIC WORKS</span>
+                                <h3 class="fw-link">Lorem Ipsum</h3>
+                                <p>Client name &middot; Location</p>
+                            </div>
+                        </article>
+
+                        <!-- 4. Metal Works -->
+                        <article class="fw-card">
+                            <div class="fw-photo">
+                                <img src="Assets/Featured Works/metal.webp" alt="Metal works project" width="760" height="570"
+                                    loading="lazy" draggable="false">
+                            </div>
+                            <div class="fw-body">
+                                <span class="fw-tag">METAL WORKS</span>
+                                <h3 class="fw-link">Lorem Ipsum</a></h3>
+                                <p>Client name &middot; Location</p>
+                            </div>
+                        </article>
+
+                        <!-- 5. Wood Works -->
+                        <article class="fw-card">
+                            <div class="fw-photo">
+                                <img src="Assets/Featured Works/wood.webp" alt="Wood works project" width="760" height="570"
+                                    loading="lazy" draggable="false">
+                            </div>
+                            <div class="fw-body">
+                                <span class="fw-tag">WOOD WORKS</span>
+                                <h3 a href="#" class="fw-link">Lorem Ipsum</a></h3>
+                                <p>Client name &middot; Location</p>
+                            </div>
+                        </article>
+
+                        <!-- 6. Window Blinds -->
+                        <article class="fw-card">
+                            <div class="fw-photo">
+                                <img src="Assets/Featured Works/windowbinds.webp" alt="Window blinds project" width="760"
+                                    height="570" loading="lazy" draggable="false">
+                            </div>
+                            <div class="fw-body">
+                                <span class="fw-tag">WINDOW BLINDS</span>
+                                <h3 class="fw-link">Lorem Ipsum</h3>
+                                <p>Client name &middot; Location</p>
+                            </div>
+                        </article>
+
+                        <!-- 7. Carpets -->
+                        <article class="fw-card">
+                            <div class="fw-photo">
+                                <img src="Assets/Featured Works/carpets.webp" alt="Carpet installation project" width="760"
+                                    height="570" loading="lazy" draggable="false">
+                            </div>
+                            <div class="fw-body">
+                                <span class="fw-tag">CARPETS</span>
+                                <h3 class="fw-link">Lorem Ipsum</h3>
+                                <p>Client name &middot; Location</p>
+                            </div>
+                        </article>
+
+                        <!-- 8. Office Furniture & Partitions -->
+                        <article class="fw-card">
+                            <div class="fw-photo">
+                                <img src="Assets/Featured Works/office.webp" alt="Office furniture and partitions project"
+                                    width="760" height="570" loading="lazy" draggable="false">
+                            </div>
+                            <div class="fw-body">
+                                <span class="fw-tag">OFFICE FURNITURE &amp; PARTITIONS</span>
+                                <h3 class="fw-link">Lorem Ipsum</h3>
+                                <p>Client name &middot; Location</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <button type="button" class="fw-arrow fw-arrow--next" aria-label="Next project">&#8594;</button>
+
+                <div class="fw-dots" aria-label="Choose a project"></div>
+            </div>
+
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        
+
     </footer>
-    <!-- Hamburger button mobile -->
-    <script>
-        const menuToggle = document.getElementById("menuToggle");
-        const navMenu = document.getElementById("navMenu");
-        const navLinks = document.querySelectorAll("#navLinks a");
-
-        menuToggle.addEventListener("click", () => 
-        {
-            const isOpen = navMenu.classList.toggle("show");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                String(isOpen)
-            );
-        });
-
-        navLinks.forEach(link => 
-        {
-            link.addEventListener("click", () => 
-            {
-                navMenu.classList.remove("show");
-                menuToggle.setAttribute("aria-expanded", "false");
-            });
-        });
-
-        window.addEventListener("resize", () => 
-        {
-            if (window.innerWidth > 768) 
-            {
-                navMenu.classList.remove("show");
-                menuToggle.setAttribute("aria-expanded", "false");
-            }
-        });
-
-        document.querySelector(".search-form").addEventListener("submit", (e) => {e.preventDefault();}); /*remove after building real search function*/
-    </script>
-
+    <script src = "JS/index.js"></script>
 </body>
+
 </html>
