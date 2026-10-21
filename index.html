@@ -28,10 +28,11 @@
     <link rel="stylesheet" href="./CSS/INDEX DESIGN/feedback-section.css">
     <!-- Contact Section CSS -->
     <link rel="stylesheet" href="./CSS/INDEX DESIGN/contact-section.css">
-    <!-- Responsiveness -->
-    <link rel="stylesheet" href="./CSS/INDEX DESIGN/index-responsive.css">
+    <!-- About Us Section CSS -->
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/about-section.css">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="./CSS/INDEX DESIGN/footer.css">
 
-    
     <script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
@@ -48,10 +49,10 @@
         <!-- Center: Main Links -->
         <nav class="nav-menu" id="navMenu">
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" id="home">Home</a></li>
                 <li><a href="#priority-section">Services & Products</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="#contact-section">Contact Us</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -637,11 +638,8 @@
                             width="800" height="600" loading="lazy">
                     </div>
                 </aside>
-
             </div>
-
         </section>
-
 
         <section class="fw-section pattern-bg" id="featured-work">
 
@@ -774,7 +772,6 @@
 
                 <div class="fw-dots" aria-label="Choose a project"></div>
             </div>
-
         </section>
 
         <section class="feedback-section" id="testimonials">
@@ -948,7 +945,7 @@
             </div>
         </section>
 
-        <section class="contact-section pattern-bg" id="contact-section">
+        <section class="contact-section pattern-bg" id="contact">
             <div class="contact-container">
               <!-- Left Column: Info Cards & Description -->
               <div class="contact-info-col">
@@ -1037,12 +1034,145 @@
             </div>
         </section>
 
+        <section class="about-section" id="about">
+            <div class="about-container">
+              
+              <!-- Left Column: Company Logo -->
+              <div class="about-logo-box">
+                <img src="Assets/Logo/Metallic SERT Enterprise Emblem.png" alt="SERT Enterprise Logo" class="about-logo-img"/>
+              </div>
+          
+              <!-- Right Column: Content & Story -->
+              <div class="about-content">
+                <h2 class="about-heading">About Us</h2>
+                
+                <p class="about-description">
+                  SERT ENTERPRISE has been in the signage and office furniture industry since 2015.
+                </p>
+          
+                <p class="about-description">
+                  We make sure we achieve our customer's standard and satisfaction. Our expertise lies not only in using the technology in signage and furnitures making.
+                </p>
+          
+                <p class="about-description">
+                  Sert Enterprise is a proud maker of different types of signages and furnitures. From drafts to installation, from prints to hard metals. And now, we also serve large format printing services, some of the new innovations and tactics of developing new products for efficient marketing. We prior to quality fabrication at it's finest with competitive pricing and full commitment to our clients.
+                </p>
+              </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-
-    </footer>
+    <footer class="site-footer">
+        <div class="footer-container">
+          
+          <!-- Top Row: Map & Link Columns -->
+          <div class="footer-top-grid">
+            
+            <!-- Column 1: Google Map Location (Replaces Logo + Bio) -->
+            <div class="footer-col footer-map-col">
+              <h4 class="footer-col-title">Our Location</h4>
+              <div class="footer-map-wrapper">
+                <!-- Replace src URL with your actual Google Maps embed iframe link -->
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15444.382029272332!2d121.0371!3d14.6488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7121b6a2283%3A0xc3f12ef4c540113f!2sQuezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph" 
+                  width="100%" 
+                  height="180" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+      
+            <!-- Column 2: Explore -->
+            <div class="footer-col">
+              <h4 class="footer-col-title">Explore</h4>
+              <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#priority-section">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#testimonials">Client Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+      
+            <!-- Column 3: Priority Projects -->
+            <div class="footer-col">
+              <h4 class="footer-col-title">Priority Projects</h4>
+              <ul class="footer-links">
+                <li>Panaflex Signages</li>
+                <li>Acrylic & Metal Letters</li>
+                <li>Office Furniture</li>
+                <li>Large Format Printing</li>
+                <li>Custom Fabrication</li>
+              </ul>
+            </div>
+      
+            <!-- Column 4: Industries -->
+            <div class="footer-col">
+              <h4 class="footer-col-title">Industries</h4>
+              <ul class="footer-links">
+                <li>Corporate Offices</li>
+                <li>Retail Stores</li>
+                <li>Restaurants</li>
+                <li>Healthcare</li>
+                <li>Commercial Buildings</li>
+              </ul>
+            </div>
+      
+          </div>
+      
+          <!-- Middle Row: CTA Banner Box -->
+          <div class="footer-cta-card">
+            <div class="footer-cta-text">
+              <span class="footer-cta-sub">LET'S BUILD SOMETHING VISIBLE</span>
+              <h3>Ready to start your signage or furniture project?</h3>
+            </div>
+            <a href="#contact" class="footer-cta-btn">Create an Account &rarr;</a>
+          </div>
+      
+          <!-- Contact Quick Cards -->
+          <div class="footer-info-cards">
+            
+            <div class="info-card">
+              <div class="info-icon">📞</div>
+              <div class="info-details">
+                <span class="info-title">Call or Email Our Team</span>
+                <a href="tel:025774292">(02) 577-4292</a>
+                <a href="tel:023683968">(02) 368-3968</a>
+                <a href="mailto:info@sertenterprise.com">sales.sertenterprise@gmail.com</a>
+              </div>
+            </div>
+      
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <div class="info-details">
+                <span class="info-title">Address</span>
+                <p>SERT Unit 2A 2nd Floor MSI Building Ortigas Avenue Ext. Barangay San Roque
+                    Antipolo, Rizal, Philippines 1870</p>
+              </div>
+            </div>
+      
+            <div class="info-card">
+              <div class="info-icon">⏰</div>
+              <div class="info-details">
+                <span class="info-title">Business Hours</span>
+                <p>Mon–Fri: 8:00 AM–5:00 PM</p>
+              </div>
+            </div>
+      
+          </div>
+      
+          <!-- Bottom Bar: Copyright & Back to Top -->
+          <div class="footer-bottom-bar">
+            <p>&copy; 2026 SERT Enterprise. All rights reserved.</p>
+            <a href="#top" class="back-to-top-btn">Back to top &uarr;</a>
+          </div>
+      
+        </div>
+      </footer>
     <script src="JS/index.js"></script>
 </body>
 

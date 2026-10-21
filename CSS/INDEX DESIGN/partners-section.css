@@ -34,14 +34,19 @@
     margin-top: 35px;
 }
 
-/* Moving track */
+/* Moving track - Using a stable 40s duration across all screens */
 .logo-track {
     display: flex;
     align-items: center;
     width: max-content;
-    animation: marquee-right 60s linear infinite;
+    animation: marquee-right 40s linear infinite;
     will-change: transform;
     backface-visibility: hidden;
+}
+
+/* Pause animation on hover */
+.logo-track:hover {
+    animation-play-state: paused;
 }
 
 /* Individual logo container */
@@ -73,10 +78,10 @@
     transform: scale(1.08);
 }
 
-/* Infinite movement: right to left */
+/* Universal infinite movement using -50% percentage shift */
 @keyframes marquee-right {
-    from { transform: translate3d(calc(-200px * 24), 0, 0); }  /* one full set */
-    to   { transform: translate3d(0, 0, 0); }
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
 }
 
 @media (max-width: 1200px) {
@@ -104,11 +109,6 @@
     .logo-item img {
         width: 125px;
         height: 85px;
-    }
-
-    @keyframes marquee-right {
-        from { transform: translate3d(calc(-170px * 24), 0, 0); }
-        to   { transform: translate3d(0, 0, 0); }
     }
 }
 
@@ -140,10 +140,5 @@
     .logo-item img {
         width: 100px;
         height: 65px;
-    }
-
-    @keyframes marquee-right {
-        from { transform: translate3d(calc(-140px * 24), 0, 0); }
-        to   { transform: translate3d(0, 0, 0); }
     }
 }

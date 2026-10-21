@@ -1,0 +1,134 @@
+/* =========================================
+   ABOUT US SECTION
+========================================= */
+
+.about-section {
+    width: 100%;
+    padding: 80px 6%;
+}
+
+.about-container {
+    max-width: 1184px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Gives slightly more room to the text on the right */
+    gap: 60px;
+    align-items: center;
+}
+
+/* ---------- Left Column Logo Container ---------- */
+
+.about-logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.about-logo-img {
+    width: 100%;
+    max-width: 380px; /* Controls max size of your logo */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    /* Optional subtle hover effect */
+    transition: transform 0.3s ease;
+}
+
+.about-logo-img:hover {
+    transform: scale(1.02);
+}
+
+/* ---------- Right Text Content ---------- */
+
+.about-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #d97a1c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.about-label::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: #d97a1c;
+    border-radius: 50%;
+}
+
+.about-heading {
+    color: #0c3d20;
+    font-size: clamp(32px, 3.8vw, 46px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+    margin-bottom: 24px;
+}
+
+.about-description {
+    color: #3f4652;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.about-description:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+========================================= */
+
+@media (max-width: 1200px) {
+    .about-container {
+        max-width: 960px;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-section {
+        padding: 60px 4%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr; /* Stacks logo above text on mobile/tablets */
+        gap: 32px;
+    }
+
+    .about-logo-img {
+        max-width: 300px; /* Scales down logo nicely for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 40px 16px; /* Safe mobile padding */
+    }
+
+    .about-logo-box {
+        padding: 10px 0;
+    }
+
+    .about-logo-img {
+        max-width: 240px;
+    }
+
+    .about-heading {
+        font-size: 26px;
+        letter-spacing: -0.5px;
+        margin-bottom: 16px;
+    }
+
+    .about-description {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 14px;
+    }
+}
