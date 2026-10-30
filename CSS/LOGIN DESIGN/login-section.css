@@ -1,12 +1,55 @@
 /* LOGIN PAGE */
+
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 42px;
+    padding: 0 18px 0 14px;
+    box-sizing: border-box;
+
+    border: 1px solid rgba(20, 83, 45, 0.35);
+    border-radius: 999px;
+    background: #fff;
+    color: #173f35;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background .2s, color .2s, border-color .2s;
+}
+
+.home-button svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.home-button:hover,
+.home-button:focus-visible {
+    background: #173f35;
+    border-color: #173f35;
+    color: #fff;
+}
+
 .login-section {
+    box-sizing: border-box;
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
     padding: 32px 24px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .login-layout {
@@ -293,21 +336,41 @@ html[data-transition-direction="login"]::view-transition-new(root) {
 .showcase-slide:nth-child(2) { --slide-image: url('../../Assets/Services/panaflex.webp'); }
 .showcase-slide:nth-child(3) { --slide-image: url('../../Assets/Services/kiosk.webp'); }
 
+@media (max-width: 1200px) {
+    .login-layout { max-width: 920px; min-height: 560px; }
+    .login-card { padding: 32px 30px 22px; }
+    .login-title { font-size: 24px; }
+    .login-gallery { min-height: 560px; }
+    .showcase-slide { padding: 24px; }
+    .showcase-text h2 { font-size: clamp(20px, 2.2vw, 28px); }
+}
+
 @media (max-width: 900px) {
-    .login-layout { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
-    .login-card { border-radius: 24px 24px 0 0; }
-    .login-gallery { min-height: 360px; }
-    .showcase-text h2 { font-size: clamp(24px, 4vw, 32px); }
+    .login-layout {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 480px;
+        min-height: 0;
+    }
+    .login-card {
+        padding: 32px 28px 22px;
+        border-radius: 24px;
+    }
+    .login-gallery { display: none; }
 }
+
 @media (max-width: 480px) {
-    .login-section { padding: 18px 12px 28px; }
-    .login-card { padding: 28px 20px 20px; }
-    .login-gallery { min-height: 300px; }
-    .showcase-slide { padding: 18px; }
-    .showcase-badge { top: 18px; left: 18px; }
-    .showcase-bottom { right: 18px; left: 18px; }
-    .showcase-text p { font-size: 12px; }
+    .login-section { padding: 16px 12px 24px; }
+    .login-layout { border-radius: 18px; }
+    .login-card { padding: 26px 18px 18px; border-radius: 18px; }
+    .login-logo img { height: 48px; }
+    .login-title { margin: 12px 0 20px; font-size: 22px; }
+    .login-form { gap: 16px; }
+    .form-group input { font-size: 16px; } /* stops iPhone zoom on focus */
+    .login-label-row { flex-wrap: wrap; }
+    .login-create { margin-top: 16px; padding: 12px; }
+    .login-links { gap: 16px; padding-top: 18px; }
 }
+ 
 @media (prefers-reduced-motion: reduce) {
     .showcase-slide, .showcase-dot, .login-button { transition: none; }
     html::view-transition-old(root), html::view-transition-new(root) { animation: none !important; }

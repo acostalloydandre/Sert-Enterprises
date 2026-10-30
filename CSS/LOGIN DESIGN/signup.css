@@ -1,12 +1,54 @@
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 42px;
+    padding: 0 18px 0 14px;
+    box-sizing: border-box;
+
+    border: 1px solid rgba(20, 83, 45, 0.35);
+    border-radius: 999px;
+    background: #fff;
+    color: #173f35;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background .2s, color .2s, border-color .2s;
+}
+
+.home-button svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.home-button:hover,
+.home-button:focus-visible {
+    background: #173f35;
+    border-color: #173f35;
+    color: #fff;
+}
+
+
 .signup-section {
+    box-sizing: border-box;
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
     padding: 36px 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .signup-layout {
