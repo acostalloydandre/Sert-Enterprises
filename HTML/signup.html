@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>SERT Enterprise - Sign Up</title>
+    <link rel="stylesheet" href="/CSS/LOGIN DESIGN/body.css">
+    <link rel="stylesheet" href="/CSS/LOGIN DESIGN/signup.css">
+    <script>
+        (() => {
+            try {
+                const direction = sessionStorage.getItem("sert-auth-transition");
+                if (direction) {
+                    document.documentElement.dataset.transitionDirection = direction;
+                    sessionStorage.removeItem("sert-auth-transition");
+                }
+            } catch (_) {}
+        })();
+    </script>
+    <script src="/JS/login.js" defer></script>
+</head>
+<body>
+    <main>
+        <section class="signup-section">
+            <div class="signup-layout">
+                <div class="signup-card">
+                    <div class="signup-main">
+                        <a href="index.html" class="signup-logo" aria-label="SERT Enterprise home">
+                            <img src="/Assets/Logo/SERT Logo.webp" alt="SERT Enterprise logo">
+                        </a>
+
+                        <h1 class="signup-title">Create an Account</h1>
+                        <p class="signup-description">
+                            Create a free account and manage everything with us in one place,
+                            from the first order to the final delivery.
+                        </p>
+
+                        <form class="signup-form" action="#" method="post">
+                            <div class="signup-group">
+                                <label for="signup-email">Email address</label>
+                                <input type="email" id="signup-email" name="email"
+                                       placeholder="Enter your email" autocomplete="email" required>
+                            </div>
+
+                            <div class="signup-group">
+                                <label for="signup-name">Name</label>
+                                <input type="text" id="signup-name" name="name"
+                                       placeholder="Enter your Full Name" autocomplete="name" required>
+                            </div>
+
+                            <div class="signup-group">
+                                <label for="signup-password">Password</label>
+                                <input type="password" id="signup-password" name="password"
+                                       placeholder="Create a password" autocomplete="new-password" required>
+                            </div>
+
+                            <div class="signup-group">
+                                <label for="signup-phone">Phone Number</label>
+                                <input type="tel" id="signup-phone" name="phone"
+                                       placeholder="Enter Phone Number" autocomplete="tel" required>
+                            </div>
+
+                            <div class="signup-group">
+                                <label for="signup-address">Address</label>
+                                <textarea id="signup-address" name="address"
+                                          placeholder="Enter Complete Address"
+                                          autocomplete="street-address" rows="4" required></textarea>
+                            </div>
+
+                            <label class="signup-checkbox">
+                                <input type="checkbox" name="marketing-consent" value="yes">
+                                <span>I would like to receive updates, offers, and promotions.</span>
+                            </label>
+
+                            <button type="submit" class="signup-submit">Create account</button>
+                        </form>
+
+                        <p class="signup-terms">
+                            By creating an account, you agree to our
+                            <a href="terms.html">Terms of Service</a> and
+                            <a href="privacy.html">Privacy Policy</a>.
+                        </p>
+
+                        <p class="signup-login">
+                            Already have an account?
+                            <a href="login.html" data-transition-to="login">Log in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

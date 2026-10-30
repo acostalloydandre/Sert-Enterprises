@@ -28,13 +28,30 @@
 
     document.querySelector(".search-form").addEventListener("submit", (e) => { e.preventDefault(); }); /*remove after building real search function*/
 
-    const track = document.getElementById('logoTrack');
-    Array.from(track.children).forEach(item => {
-        const clone = item.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        clone.querySelector('img').alt = '';
-        track.appendChild(clone);
-    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.getElementById('logoTrack');
+  
+      if (!track || track.dataset.cloned === 'true') return;
+  
+      const originalItems = Array.from(track.children);
+  
+      originalItems.forEach(item => {
+          const clone = item.cloneNode(true);
+  
+          clone.setAttribute('aria-hidden', 'true');
+  
+          const img = clone.querySelector('img');
+          if (img) {
+              img.alt = '';
+          }
+  
+          track.appendChild(clone);
+      });
+  
+      track.dataset.cloned = 'true';
+  });
+  
 
     lucide.createIcons();
 

@@ -37,23 +37,24 @@
 /* Moving track - Using a stable 40s duration across all screens */
 .logo-track {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     width: max-content;
     animation: marquee-right 40s linear infinite;
     will-change: transform;
-    backface-visibility: hidden;
 }
 
 /* Pause animation on hover */
+.logo-track,
 .logo-track:hover {
-    animation-play-state: paused;
+    animation-play-state: running;
 }
 
 /* Individual logo container */
 .logo-item {
+    flex: 0 0 200px;
     width: 200px;
     height: 130px;
-    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,12 +64,10 @@
 
 /* Logo images */
 .logo-item img {
+    display: block;
     width: 145px;
     height: 100px;
     object-fit: contain;
-    filter: grayscale(100%) brightness(0.45);
-    opacity: 1;
-    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Slightly emphasize logos on hover */
@@ -80,8 +79,12 @@
 
 /* Universal infinite movement using -50% percentage shift */
 @keyframes marquee-right {
-    0%   { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-50%, 0, 0); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 @media (max-width: 1200px) {
@@ -100,15 +103,20 @@
         padding: 30px 0;
     }
 
+    .logo-track {
+        animation-duration: 32s;
+    }
+
     .logo-item {
-        width: 170px;
-        height: 110px;
-        padding: 12px 16px;
+        flex-basis: 150px;
+        width: 150px;
+        height: 100px;
+        padding: 10px;
     }
 
     .logo-item img {
         width: 125px;
-        height: 85px;
+        height: 80px;
     }
 }
 
@@ -125,20 +133,35 @@
 
     .partners-section {
         padding: 24px 0;
+        overflow: hidden;
+    }
+
+    .logo-track {
+        animation-duration: 25s;
     }
 
     .logo-marquee {
-        margin-top: 24px;
+        margin-top: 20px;
     }
 
     .logo-item {
-        width: 140px;
-        height: 90px;
-        padding: 10px 12px;
+        flex-basis: 115px;
+        width: 115px;
+        height: 80px;
+        padding: 8px;
     }
 
     .logo-item img {
-        width: 100px;
-        height: 65px;
+        width: 95px;
+        height: 60px;
+    }
+
+    .logo-item:hover img {
+        transform: none;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .logo-track {
+        animation: none;
     }
 }

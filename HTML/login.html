@@ -3,9 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="view-transition" content="same-origin">
+    <title>SERT Enterprise - Log in</title>
+    <link rel="stylesheet" href="/CSS/LOGIN DESIGN/body.css">
+    <link rel="stylesheet" href="/CSS/LOGIN DESIGN/login-section.css">
+    <script>
+        // Set the transition direction before the page is painted.
+        (() => {
+            try {
+                const direction = sessionStorage.getItem("sert-auth-transition");
+                if (direction) {
+                    document.documentElement.dataset.transitionDirection = direction;
+                    sessionStorage.removeItem("sert-auth-transition");
+                }
+            } catch (_) {}
+        })();
+    </script>
+    <script src="/JS/login.js" defer></script>
 </head>
 <body>
-    
+    <main>
+        <section class="login-section">
+            <div class="login-layout">
+                <div class="login-card">
+                    <div class="login-main">
+                        <a href="/index.html" class="login-logo" aria-label="SERT Enterprise home">
+                            <img src="/Assets/Logo/SERT Logo.webp" alt="SERT Enterprise logo">
+                        </a>
+
+                        <h1 class="login-title">Log in to SERT Enterprise</h1>
+
+                        <form class="login-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="login-email">Email address</label>
+                                <input type="email" id="login-email" name="email"
+                                       autocomplete="username" autofocus required>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="login-label-row">
+                                    <label for="login-password">Password</label>
+                                    <a href="forgot-password.html" class="login-forgot">Forgot password?</a>
+                                </div>
+                                <input type="password" id="login-password" name="password"
+                                       autocomplete="current-password" required>
+                            </div>
+
+                            <button type="submit" class="login-button">Log in</button>
+                        </form>
+
+                        <p class="login-create">
+                            New to SERT Enterprise?
+                            <a href="signup.html" data-transition-to="signup">Create an account</a>.
+                        </p>
+                    </div>
+
+                    <nav class="login-links" aria-label="Legal and contact">
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+
+                <aside class="login-gallery" aria-label="Featured projects">
+                    <div class="showcase-track" id="showcaseTrack">
+                        <article class="showcase-slide active" style="--slide-image: url('/Assets/Services/cubicle.webp');">
+                            <div class="showcase-content">
+                                <span class="showcase-badge"><span class="badge-dot"></span>Project Showcase</span>
+                                <div class="showcase-text">
+                                    <span class="showcase-category">INTERIOR FIT-OUT &amp; SUPPLY</span>
+                                    <h2>Corporate Office &amp; Retail Spaces</h2>
+                                    <p>End-to-end interior partitions, modular workstations, and complete physical fit-out installations.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="showcase-slide" style="--slide-image: url('/Assets/Services/panaflex.webp');">
+                            <div class="showcase-content">
+                                <span class="showcase-badge"><span class="badge-dot"></span>Project Showcase</span>
+                                <div class="showcase-text">
+                                    <span class="showcase-category">SIGNAGE &amp; BRANDING</span>
+                                    <h2>Standout Signs &amp; Displays</h2>
+                                    <p>Custom signage, illuminated displays, and professional branding solutions for businesses.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="showcase-slide" style="--slide-image: url('/Assets/Services/kiosk.webp');">
+                            <div class="showcase-content">
+                                <span class="showcase-badge"><span class="badge-dot"></span>Project Showcase</span>
+                                <div class="showcase-text">
+                                    <span class="showcase-category">FURNITURE &amp; WORKSPACES</span>
+                                    <h2>Functional Spaces, Built Better</h2>
+                                    <p>Quality furniture, office workstations, and practical solutions for modern workplaces.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="showcase-bottom">
+                        <div class="showcase-dots" aria-label="Choose a project slide">
+                            <button class="showcase-dot active" type="button" aria-label="Show slide 1" aria-current="true"></button>
+                            <button class="showcase-dot" type="button" aria-label="Show slide 2"></button>
+                            <button class="showcase-dot" type="button" aria-label="Show slide 3"></button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
