@@ -289,6 +289,10 @@ html[data-transition-direction="login"]::view-transition-new(root) {
 @keyframes auth-out-right { to { opacity: 0; transform: translateX(28px); } }
 @keyframes auth-in-left { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: translateX(0); } }
 
+.showcase-slide:nth-child(1) { --slide-image: url('../../Assets/Services/cubicle.webp'); }
+.showcase-slide:nth-child(2) { --slide-image: url('../../Assets/Services/panaflex.webp'); }
+.showcase-slide:nth-child(3) { --slide-image: url('../../Assets/Services/kiosk.webp'); }
+
 @media (max-width: 900px) {
     .login-layout { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
     .login-card { border-radius: 24px 24px 0 0; }
