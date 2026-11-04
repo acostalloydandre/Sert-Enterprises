@@ -33,7 +33,7 @@ require_once __DIR__ . '/custom-orders-data.php';
         <div class="page-heading">
           <p class="eyebrow">SERT ENTERPRISE / WORKSPACE</p>
           <h1>Custom Orders & Services</h1>
-          <p class="welcome">Manage bespoke fabrication requests, signage, and material quotes.</p>
+          <p class="welcome">Manage fabrication requests, signage, and material quotes.</p>
         </div>
         <div class="topbar-actions">
           <label class="search-box">
