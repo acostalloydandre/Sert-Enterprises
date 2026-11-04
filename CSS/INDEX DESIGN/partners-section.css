@@ -1,4 +1,6 @@
-/* Trusted Partners Section */
+/* =========================================
+   PARTNERS LOGO SECTION
+========================================= */
 .partners-heading {
     max-width: 850px;
     margin: 0 auto 32px;
@@ -27,14 +29,12 @@
     overflow: hidden;
 }
 
-/* Marquee container */
 .logo-marquee {
     width: 100%;
     overflow: hidden;
     margin-top: 35px;
 }
 
-/* Moving track - Using a stable 40s duration across all screens */
 .logo-track {
     display: flex;
     flex-wrap: nowrap;
@@ -44,13 +44,11 @@
     will-change: transform;
 }
 
-/* Pause animation on hover */
 .logo-track,
 .logo-track:hover {
     animation-play-state: running;
 }
 
-/* Individual logo container */
 .logo-item {
     flex: 0 0 200px;
     width: 200px;
@@ -62,7 +60,6 @@
     box-sizing: border-box;
 }
 
-/* Logo images */
 .logo-item img {
     display: block;
     width: 145px;
@@ -70,14 +67,12 @@
     object-fit: contain;
 }
 
-/* Slightly emphasize logos on hover */
 .logo-item:hover img {
     opacity: 1;
     filter: grayscale(100%) brightness(0.2);
     transform: scale(1.08);
 }
 
-/* Universal infinite movement using -50% percentage shift */
 @keyframes marquee-right {
     from {
         transform: translateX(0);

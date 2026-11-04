@@ -1,3 +1,7 @@
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
 .contact-section {
     width: 100%;
     padding: 80px 5%;
@@ -14,7 +18,6 @@
     align-items: start;
   }
   
-  /* Left Column Styling */
   .contact-info-col {
     display: flex;
     flex-direction: column;
@@ -88,7 +91,6 @@
     margin: 0;
   }
   
-  /* Right Column Form Box */
   .contact-form-wrapper {
     background: rgba(255, 255, 255, 0.97);
     border: 1px solid rgba(255, 255, 255, 0.8);
@@ -182,7 +184,6 @@
     background-color: #d6a52a;
   }
   
-  /* Responsive Media Queries */
   @media (max-width: 1024px) {
     .contact-container {
       grid-template-columns: 1fr;

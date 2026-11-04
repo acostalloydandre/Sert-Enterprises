@@ -21,10 +21,6 @@
     gap: 65px;
 }
 
-/* =========================================
-   LEFT INTRODUCTION
-========================================= */
-
 .workflow-intro {
     padding-top: 2px;
 }
@@ -63,19 +59,11 @@
     line-height: 1.9;
 }
 
-/* =========================================
-   WORKFLOW GRID
-========================================= */
-
 .workflow-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
 }
-
-/* =========================================
-   WORKFLOW CARDS
-========================================= */
 
 .workflow-card {
     position: relative;
@@ -103,7 +91,6 @@
     border-color: #d97a1c;
 }
 
-/* Number */
 
 .workflow-number {
     display: block;
@@ -115,13 +102,10 @@
     letter-spacing: 0.5px;
 }
 
-/* Icon */
-
 .workflow-icon {
     display: none;
 }
 
-/* Card heading */
 
 .workflow-card h3 {
     margin: 0 0 10px;
@@ -132,8 +116,6 @@
     line-height: 1.3;
     letter-spacing: -0.4px;
 }
-
-/* Card description */
 
 .workflow-card p {
     margin: 0 0 20px;

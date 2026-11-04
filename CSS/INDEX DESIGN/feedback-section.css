@@ -1,6 +1,5 @@
 /* =========================================
-   CLIENT FEEDBACK SECTION (draft)
-   Add to the bottom of your main CSS file
+   CLIENT FEEDBACK SECTION
 ========================================= */
 
 .feedback-section {
@@ -12,8 +11,6 @@
     max-width: 1184px;
     margin: 0 auto;
 }
-
-/* ---------- Header ---------- */
 
 .feedback-header {
     display: flex;
@@ -34,7 +31,6 @@
     letter-spacing: 1.2px;
 }
 
-/* Small orange dot before the label */
 .feedback-label::before {
     content: "";
     width: 7px;
@@ -60,15 +56,12 @@
     margin-top: 12px;
 }
 
-/* ---------- Grid ---------- */
 
 .feedback-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
-
-/* ---------- Card ---------- */
 
 .feedback-card {
     display: flex;
@@ -77,8 +70,6 @@
     gap: 26px;
     min-width: 0;
     padding: 24px;
-
-    /* white with a faint warm tint toward the bottom */
     background: linear-gradient(180deg, #ffffff 55%, rgba(217, 122, 28, 0.08) 100%);
     border: 1px solid rgba(12, 61, 32, 0.08);
     border-radius: 16px;
@@ -102,8 +93,6 @@
     line-height: 1.8;
 }
 
-/* ---------- Person + rating ---------- */
-
 .feedback-footer {
     display: flex;
     align-items: center;
@@ -125,8 +114,6 @@
     border-radius: 50%;
 }
 
-/* If you use real photos instead of initials:
-   <img class="feedback-avatar" src="..." alt="Client Name"> */
 img.feedback-avatar {
     object-fit: cover;
     background: #e8e9e7;
@@ -174,7 +161,7 @@ img.feedback-avatar {
     height: 180px;
     overflow: hidden;
     border-radius: 10px;
-    background-color: #e8e9e7; /* Placeholder background color while loading */
+    background-color: #e8e9e7;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,7 +175,6 @@ img.feedback-avatar {
     transition: transform 0.3s ease;
 }
 
-/* Subtle zoom effect on hover */
 .feedback-card:hover .feedback-media img {
     transform: scale(1.03);
 }

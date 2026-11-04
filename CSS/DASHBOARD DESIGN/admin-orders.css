@@ -1,0 +1,177 @@
+/* ================================================================= */
+/* SERT Enterprise - Orders Page Stylesheet                          */
+/* ================================================================= */
+
+/* Master-Detail Side-by-Side Layout Grid (Increased Directory Width) */
+.orders-master-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr; /* Changed from 300px to 360px */
+    gap: 24px;
+    align-items: start;
+    margin-top: 24px;
+}
+  
+@media (max-width: 1024px) {
+    .orders-master-layout {
+      grid-template-columns: 1fr;
+    }
+}
+  
+/* Directory Panel (Left Side) */
+.directory-panel {
+    padding: 20px;
+}
+  
+.directory-header {
+    margin-bottom: 16px;
+}
+  
+.directory-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: var(--muted, #64748b);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+  
+.directory-title {
+    font-size: 16px;
+    color: var(--text-main, #1e293b);
+    font-weight: 700;
+}
+  
+.directory-subtitle {
+    font-size: 12px;
+    color: var(--muted, #64748b);
+    margin-bottom: 16px;
+}
+  
+/* Client List Items */
+.client-list-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+  
+.client-item-link {
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+  
+.client-item-link:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+  
+.client-item-link.active {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+  
+.client-item-link strong {
+    color: var(--text-main, #1e293b);
+    display: block;
+    font-size: 13px;
+}
+  
+.client-item-link small {
+    color: var(--muted, #64748b);
+    font-size: 11px;
+}
+  
+.client-item-link span {
+    color: var(--muted, #64748b);
+    font-size: 12px;
+}
+  
+/* Content Panel (Right Side) */
+.content-detail-panel {
+    padding: 30px;
+    min-height: 450px;
+}
+  
+.client-record-header {
+    margin-bottom: 24px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 16px;
+}
+  
+.client-record-header h2 {
+    font-size: 20px;
+    color: var(--text-main, #1e293b);
+    font-weight: 700;
+}
+  
+/* Active Order Box */
+.active-order-section {
+    margin-bottom: 30px;
+}
+  
+.section-label-heading {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--muted, #64748b);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+  
+.active-order-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 18px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.active-order-details strong {
+    font-size: 14px;
+    color: var(--text-main, #1e293b);
+}
+  
+.active-order-details p {
+    font-size: 12px;
+    color: var(--muted, #64748b);
+    margin-top: 4px;
+}
+  
+.active-order-pricing {
+    text-align: right;
+}
+  
+.active-order-pricing .amount-text {
+    font-weight: bold;
+    display: block;
+    font-size: 14px;
+    color: var(--text-main, #1e293b);
+}
+  
+/* Empty State Styling */
+.empty-orders-state {
+    text-align: center;
+    padding: 100px 20px;
+    color: var(--muted, #64748b);
+}
+  
+.empty-orders-state h3 {
+    font-size: 18px;
+    color: var(--text-main, #1e293b);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+  
+.empty-orders-state p {
+    font-size: 13px;
+}

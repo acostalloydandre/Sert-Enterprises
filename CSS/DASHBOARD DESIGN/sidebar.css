@@ -1,0 +1,242 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 248px;
+    overflow: visible;
+    inset: 0 auto 0 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 17px 17px;
+    background: var(--green);
+    color: #fff;
+    transition: width 0.3s ease;
+}
+
+/* Company Logo */
+.brand {
+    width: 100%;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.brand-logo {
+    object-fit: contain;
+    display: block;
+}
+
+.brand-logo-full {
+    width: 160px;
+    height: auto;
+}
+
+.brand-logo-small {
+    display: none;
+    width: 42px;
+    height: 42px;
+}
+
+.sidebar-label {
+  padding: 0 13px 10px;
+  color: #a9c5ba;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.secondary-label {
+  margin-top: 25px;
+}
+
+.main-nav {
+  display: grid;
+  gap: 4px;
+}
+.nav-link {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 13px;
+  border-radius: 8px;
+  color: #e0ebe5;
+  font-size: 12px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+}
+.nav-link.active {
+  background: #fff;
+  color: var(--green);
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+.nav-icon {
+  width: 17px;
+  text-align: center;
+  font-size: 17px;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+.nav-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 180px;
+    opacity: 1;
+    margin-left: 10px;
+
+    transition:
+        max-width 0.3s ease,
+        opacity 0.2s ease,
+        margin 0.3s ease;
+}
+.nav-count {
+  margin-left: auto;
+  min-width: 21px;
+  padding: 3px 5px;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+  font-size: 10px;
+}
+.nav-link.active .nav-count {
+  background: #e9f2ed;
+  color: var(--green);
+}
+.nav-count.unread {
+  background: var(--orange);
+  color: #fff;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 17px 5px 0;
+  margin-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+.sidebar-user strong,
+.profile-button strong {
+  display: block;
+  font-size: 10px;
+}
+.sidebar-user small,
+.profile-button small {
+  display: block;
+  margin-top: 4px;
+  color: #bad0c6;
+  font-size: 9px;
+}
+.more {
+  margin-left: auto;
+  letter-spacing: 2px;
+  color: #bdd0c6;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    color: #164e40;
+
+    border: 1px solid #e5eae6;
+    border-radius: 50%;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+body.sidebar-collapsed .sidebar-toggle {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+body.sidebar-collapsed .sidebar {
+    width: 76px;
+}
+
+body.sidebar-collapsed .main-content {
+    margin-left: 76px;
+}
+
+body.sidebar-collapsed .nav-link {
+    justify-content: center;
+}
+
+body.sidebar-collapsed .nav-link {
+    font-size: 0;
+}
+
+body.sidebar-collapsed .nav-icon {
+    font-size: 19px;
+}
+
+body.sidebar-collapsed .brand-copy,
+body.sidebar-collapsed .sidebar-label,
+body.sidebar-collapsed .nav-count,
+body.sidebar-collapsed .sidebar-bottom {
+    display: none;
+}
+
+body.sidebar-collapsed .brand-logo-full {
+    display: none;
+}
+
+body.sidebar-collapsed .brand-logo-small {
+    display: block;
+}
+
+body.sidebar-collapsed .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+body.sidebar-collapsed .nav-text {
+    max-width: 0;
+    opacity: 0;
+    margin-left: 0;
+    pointer-events: none;
+}

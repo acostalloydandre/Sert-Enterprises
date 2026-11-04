@@ -1,5 +1,5 @@
 /* =========================================
-   SERVICES SECTION
+   SERVICES & PRODUCTS SECTION
 ========================================= */
 
 .service-feature {
@@ -11,7 +11,6 @@
     max-width: 1184px;
     min-height: 330px;
 
-    /* Center the section and add spacing below */
     margin: 0 auto 24px;
 
     overflow: hidden;
@@ -20,12 +19,10 @@
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.045);
 }
 
-/* Keep both sections aligned to the same width */
 .service-feature + .service-feature {
     margin-top: 0;
 }
 
-/* Image area */
 
 .service-feature .service-image {
     min-width: 0;
@@ -47,8 +44,6 @@
     transform: scale(1.035);
 }
 
-/* Text area */
-
 .service-feature .service-content {
     display: flex;
     flex-direction: column;
@@ -58,8 +53,6 @@
     padding: clamp(28px, 4vw, 55px);
 }
 
-/* Reverse image and content */
-
 .service-feature.reverse .service-image {
     order: 2;
 }
@@ -68,18 +61,10 @@
     order: 1;
 }
 
-/* =========================
-   SECTION
-========================= */
-
 .priority-section {
     width: 100%;
     padding: 70px 6%;
 }
-
-/* =========================
-   SECTION HEADER
-========================= */
 
 .section-header {
     max-width: 850px;
@@ -113,10 +98,6 @@
     line-height: 1.9;
 }
 
-/* =========================
-   PROJECT GRID
-========================= */
-
 .projects-grid {
     max-width: 1184px;
     margin: 0 auto;
@@ -125,10 +106,6 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
 }
-
-/* =========================
-   PROJECT CARD
-========================= */
 
 .project-card {
     background-color: #ffffff;
@@ -149,8 +126,6 @@
     box-shadow: 0 18px 35px rgba(20, 30, 55, 0.12);
 }
 
-/* Card Image */
-
 .project-image {
     display: block;
     width: 100%;
@@ -158,8 +133,6 @@
     object-fit: cover;
     object-position: center;
 }
-
-/* Card Content */
 
 .project-content {
     padding: 19px 15px 17px;
@@ -185,8 +158,6 @@
     letter-spacing: -0.3px;
     margin-bottom: 13px;
 }
-
-/* Card Link */
 
 .project-link {
     display: inline-flex;

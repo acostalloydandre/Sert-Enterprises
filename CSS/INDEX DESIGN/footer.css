@@ -4,7 +4,7 @@
 
 .site-footer {
     width: 100%;
-    background-color: #082815; /* Deep dark green */
+    background-color: #082815;
     color: #ffffff;
     padding: 70px 6% 30px;
     font-family: inherit;
@@ -14,8 +14,6 @@
     max-width: 1184px;
     margin: 0 auto;
 }
-
-/* ---------- Top Grid Layout ---------- */
 
 .footer-top-grid {
     display: grid;
@@ -59,10 +57,8 @@
 }
 
 .footer-links a:hover {
-    color: #d97a1c; /* Accent orange on hover */
+    color: #d97a1c;
 }
-
-/* ---------- CTA Banner ---------- */
 
 .footer-cta-card {
     background: linear-gradient(135deg, #0e4827 0%, #123c2d 100%);
@@ -109,8 +105,6 @@
     background-color: #c06915;
     transform: translateY(-2px);
 }
-
-/* ---------- Info Quick Cards ---------- */
 
 .footer-info-cards {
     display: grid;
@@ -166,8 +160,6 @@
     color: #d97a1c;
 }
 
-/* ---------- Bottom Copyright Bar ---------- */
-
 .footer-bottom-bar {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 24px;
@@ -196,10 +188,6 @@
 .back-to-top-btn:hover {
     background: #e2e8e4;
 }
-
-/* =========================================
-   RESPONSIVE BREAKPOINTS
-========================================= */
 
 @media (max-width: 1200px) {
     .footer-top-grid {

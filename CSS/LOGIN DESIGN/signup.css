@@ -1,3 +1,7 @@
+/* =========================================
+   SIGN UP PAGE
+========================================= */
+
 .home-button {
     position: fixed;
     top: 20px;
@@ -183,7 +187,6 @@
     accent-color: #173f35;
 }
 
-/* Fix the default browser button appearance */
 .signup-form button.signup-submit,
 button.signup-submit {
     appearance: none;
@@ -244,7 +247,6 @@ button.signup-submit:hover {
     text-align: center;
 }
 
-/* Opposite-direction cross-page transition */
 @view-transition { navigation: auto; }
 html[data-transition-direction="signup"]::view-transition-old(root) {
     animation: auth-out-left .28s ease-in both;

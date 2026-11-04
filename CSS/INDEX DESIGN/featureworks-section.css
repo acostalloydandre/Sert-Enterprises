@@ -1,10 +1,12 @@
+/* =========================================
+   FEATURE WORKS SECTION
+========================================= */
+
 .fw-section {
     width: 100%;
     padding: 80px 0 70px;
     background-color: #123c2d;
 }
-
-/* ---------- Featured Work Header ---------- */
 
 .fw-header {
     width: 100%;
@@ -18,7 +20,6 @@
     text-align: center;
 }
 
-/* Orange label */
 .fw-label {
     display: block;
     margin: 0 0 12px;
@@ -30,7 +31,6 @@
     line-height: 1.5;
 }
 
-/* Main heading */
 .fw-header h2 {
     max-width: none; 
     margin: 0 0 16px;
@@ -94,12 +94,6 @@
     outline-offset: 3px;
 }
 
-
-/* =========================================
-   FEATURED WORK SECTION
-   Add to the bottom of your main CSS file
-========================================= */
-
 .fw-section
  {
     --fw-card-w: clamp(250px, 32vw, 400px);
@@ -109,8 +103,6 @@
     padding: 80px 0 70px;
     overflow: hidden;
 }
-
-/* ---------- Header (centered) ---------- */
 
 .fw-header {
     max-width: 700px;
@@ -143,21 +135,17 @@
     line-height: 1.9;
 }
 
-/* ---------- Carousel ---------- */
-
 .fw-carousel {
     position: relative;
     width: 100%;
 }
 
-/* Clips the row and fades the far edges */
 .fw-viewport {
     overflow: hidden;
     padding: 30px 0 46px;
     touch-action: pan-y;
 }
 
-/* Soft fade at the left and right edges */
 .fw-carousel::before,
 .fw-carousel::after {
     content: "";
@@ -192,17 +180,13 @@
     transition: transform 0.6s cubic-bezier(0.22, 0.8, 0.3, 1);
 }
 
-/* While silently jumping back to the middle set, turn off all motion */
 .fw-carousel.is-jumping * {
     transition: none !important;
 }
 
-/* ---------- Arrows (left and right sides) ---------- */
-
 .fw-arrow {
     position: absolute;
     z-index: 3;
-    /* Vertically centered on the photo part of the card */
     top: calc(33px + var(--fw-card-w) * 0.375);
     transform: translateY(-50%);
 
@@ -236,8 +220,6 @@
     outline-offset: 3px;
 }
 
-/* ---------- Cards ---------- */
-
 .fw-card {
     position: relative;
     flex: 0 0 var(--fw-card-w);
@@ -247,7 +229,6 @@
     padding: 10px;
     overflow: hidden;
 
-    /* Glass */
     background: rgba(255, 255, 255, 0.10);
     -webkit-backdrop-filter: blur(14px) saturate(140%);
             backdrop-filter: blur(14px) saturate(140%);
@@ -257,7 +238,6 @@
         0 12px 32px rgba(0, 0, 0, 0.28),
         inset 0 1px 0 rgba(255, 255, 255, 0.25);
 
-    /* Side cards are smaller and dimmer */
     transform: scale(0.86);
     opacity: 0.55;
     cursor: pointer;
@@ -276,8 +256,6 @@
         0 18px 40px rgba(0, 0, 0, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
-
-/* Photo */
 
 .fw-photo {
     position: relative;
@@ -322,8 +300,6 @@
     transform: translateY(0);
 }
 
-/* Text */
-
 .fw-body {
     padding: 16px 10px 8px;
 }
@@ -350,7 +326,6 @@
     text-decoration: none;
 }
 
-/* Makes the whole card clickable */
 .fw-link::after {
     content: "";
     position: absolute;
@@ -371,8 +346,6 @@
     font-size: 12px;
     line-height: 1.6;
 }
-
-/* ---------- Dots ---------- */
 
 .fw-dots {
     display: flex;

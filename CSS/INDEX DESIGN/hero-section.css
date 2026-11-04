@@ -1,4 +1,7 @@
-/* hero banner section */
+/* =========================================
+   HERO BANNER SECTION
+========================================= */
+
 :root 
 {
     --hero-orange: #f28c28;
@@ -26,7 +29,7 @@
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    animation: heroSlideshow 42s infinite; /* 7 images x 6 seconds */
+    animation: heroSlideshow 42s infinite;
 }
   
 .slideshow-image:nth-child(1) { animation-delay: 0s; }
@@ -41,7 +44,7 @@
 {
     0%     { opacity: 0; transform: scale(1.04); }
     3%     { opacity: 1; }
-    14.28% { opacity: 1; }                       /* 100 / 7 images */
+    14.28% { opacity: 1; }                    
     17.5%  { opacity: 0; transform: scale(1); }
     100%   { opacity: 0; }
 }
@@ -59,7 +62,6 @@
     );
 }
   
-  /* Left-aligned content */
   .banner-content {
     position: relative;
     z-index: 2;
@@ -68,7 +70,6 @@
     color: #fff;
   }
   
-  /* Small orange line above the heading */
   .eyebrow {
     display: block;
     margin-bottom: 24px;
@@ -87,7 +88,6 @@
     line-height: 1.1;
   }
   
-  /* Orange second line of the heading */
   .main-heading .accent {
     display: block;
     color: var(--hero-orange);
@@ -101,7 +101,6 @@
     color: rgba(255, 255, 255, 0.95);
   }
   
-  /* Orange pill button */
   .btn-get-started {
     display: inline-flex;
     align-items: center;
@@ -140,7 +139,6 @@
     margin-bottom: 20px;
 }
 
-/* Get a Free Quote button */
 .btn-quote {
     display: inline-flex;
     align-items: center;
@@ -163,7 +161,6 @@
     transform: translateY(-2px);
 }
 
-/* Phone number button */
 .btn-phone {
     display: inline-flex;
     align-items: center;
@@ -185,7 +182,6 @@
     border-color: #fff;
 }
 
-/* Customer reviews link */
 .reviews-link {
     display: inline-flex;
     align-items: center;
@@ -209,7 +205,6 @@
     color: #f2f2f2;
 }
 
-/* Keyboard accessibility */
 .btn-quote:focus-visible,
 .btn-phone:focus-visible,
 .reviews-link:focus-visible {
@@ -217,7 +212,6 @@
     outline-offset: 4px;
 }
 
-/* Two-column hero layout */
 .hero-layout {
   position: relative;
   z-index: 2;
@@ -232,7 +226,6 @@
   gap: clamp(35px, 5vw, 80px);
 }
 
-/* Left-side banner content */
 .banner-content {
   position: relative;
   z-index: 2;
@@ -249,7 +242,6 @@
   margin-bottom: 24px;
 }
 
-/* Form container on the right */
 .hero-form-wrapper {
   width: 100%;
   min-width: 0;
@@ -260,7 +252,6 @@
   scrollbar-color: #c5cbd4 transparent;
 }
 
-/* White form card */
 .hero-contact-form {
   display: flex;
   flex-direction: column;
@@ -331,7 +322,6 @@
   box-shadow: 0 0 0 3px rgba(18, 60, 45, 0.1);
 }
 
-/* Red submit button */
 .hero-submit-button {
   width: 100%;
   min-height: 48px;
@@ -356,11 +346,6 @@
   background: #d6a52a;
 }
 
-/* ==========================================
-   RESPONSIVE MEDIA QUERIES
-   ========================================== */
-
-/* 1. Max-width: 1200px (Laptops & Small Desktops) */
 @media (max-width: 1200px) 
 {
     
@@ -394,7 +379,6 @@
     }
 }
 
-/* 2. Max-width: 900px (Tablets & Medium Devices) */
 @media (max-width: 900px) 
 {
     .hero-section {
@@ -429,7 +413,6 @@
     }
 }
 
-/* 3. Max-width: 480px (Mobile Phones) */
 @media (max-width: 480px) 
 {
     .hero-section {

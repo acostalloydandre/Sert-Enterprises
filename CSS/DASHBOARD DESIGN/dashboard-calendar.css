@@ -1,0 +1,201 @@
+/* Month calendar */
+.calendar-panel {
+  padding-bottom: 13px;
+}
+.calendar-heading {
+  margin-bottom: 10px;
+}
+.calendar-controls {
+  display: flex;
+  gap: 5px;
+}
+.calendar-controls button {
+  width: 27px;
+  height: 27px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: #64736a;
+  font-size: 19px;
+  cursor: pointer;
+}
+.calendar-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #87928a;
+  font-size: 9px;
+}
+.calendar-toolbar a {
+  color: var(--orange);
+  font-weight: 700;
+}
+.today-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.today-label i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.weekday {
+  min-height: 26px;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: #9aa39d;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.day {
+  position: relative;
+  min-height: 39px;
+  padding: 6px 7px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: #526057;
+  font-size: 9px;
+}
+.day.muted {
+  color: #c4cbc6;
+  background: #fafbfa;
+}
+.day.selected {
+  background: #edf5f0;
+  color: var(--green);
+  font-weight: 800;
+}
+.day.selected span {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  margin: -3px 0 0 -4px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+}
+.event-dot {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+.green-dot {
+  background: #4b9870;
+}
+.orange-dot {
+  background: #d18a32;
+}
+.purple-dot {
+  background: #8b70cb;
+}
+.blue-dot {
+  background: #5e91c4;
+}
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 13px;
+  padding-top: 10px;
+  color: #89938c;
+  font-size: 8px;
+}
+.calendar-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.calendar-legend i {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+
+/* Additional calendar event categories */
+.gold-dot { background: #d6a52a; }
+.red-dot { background: #d66b5d; }
+.day.has-event { cursor: help; }
+.day.has-event:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: -2px;
+  z-index: 2;
+}
+.day.has-event:hover { background: #f5f8f5; }
+
+/* Project details appear in a floating tooltip so the dashboard grid is not clipped. */
+.calendar-project-tooltip {
+  position: fixed;
+  z-index: 9999;
+  width: min(290px, calc(100vw - 24px));
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(20, 45, 32, .16);
+  color: var(--ink);
+  pointer-events: auto;
+}
+.calendar-project-tooltip[hidden] { display: none; }
+.calendar-project-tooltip .tooltip-date {
+  margin: 0 0 9px;
+  color: #89938c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+.calendar-project-tooltip .tooltip-project + .tooltip-project {
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: 1px solid var(--line);
+}
+.calendar-project-tooltip .tooltip-project strong {
+  display: block;
+  color: var(--green-dark);
+  font-size: 11px;
+}
+.calendar-project-tooltip .tooltip-meta {
+  display: block;
+  margin-top: 4px;
+  color: #87928a;
+  font-size: 9px;
+  line-height: 1.5;
+}
+.calendar-project-tooltip .tooltip-phase {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 9px;
+  color: #59675e;
+  font-size: 9px;
+}
+.calendar-project-tooltip .tooltip-progress {
+  height: 6px;
+  margin-top: 6px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #edf0ed;
+}
+.calendar-project-tooltip .tooltip-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #5b9874;
+}

@@ -1,4 +1,6 @@
-/*Navbar layout*/
+/* =========================================
+   NAVIGATION BAR SECTION
+========================================= */
 
 .navbar 
 {
@@ -353,7 +355,6 @@
         border-radius: 2px;
     }
 }
-/* Small mobile phones */
 @media (max-width: 480px) 
 {
     .navbar 
@@ -367,7 +368,6 @@
         width: 105px;
     }
 
-    /* Compact search field */
     .search-form 
     {
         width: 38px;

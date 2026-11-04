@@ -1,4 +1,7 @@
-/* LOGIN PAGE */
+/* =========================================
+   LOG IN PAGE
+========================================= */
+
 .home-button {
     position: fixed;
     top: 20px;
@@ -124,7 +127,7 @@
 .form-group input {
     display: block;
     width: 100%;
-    box-sizing: border-box; /* add this */
+    box-sizing: border-box;
     height: 46px;
     padding: 0 16px;
     border: 1px solid #d3dbd6;
@@ -200,7 +203,6 @@
     font-size: 12px;
 }
 
-/* Project showcase carousel */
 .login-gallery {
     position: relative;
     min-width: 0;
@@ -310,7 +312,6 @@
 }
 .showcase-dot.active { width: 28px; background: #fff; }
 
-/* Cross-document View Transition: direction is set before navigation */
 @view-transition { navigation: auto; }
 
 html[data-transition-direction="signup"]::view-transition-old(root) {
@@ -364,7 +365,7 @@ html[data-transition-direction="login"]::view-transition-new(root) {
     .login-logo img { height: 48px; }
     .login-title { margin: 12px 0 20px; font-size: 22px; }
     .login-form { gap: 16px; }
-    .form-group input { font-size: 16px; } /* stops iPhone zoom on focus */
+    .form-group input { font-size: 16px; }
     .login-label-row { flex-wrap: wrap; }
     .login-create { margin-top: 16px; padding: 12px; }
     .login-links { gap: 16px; padding-top: 18px; }

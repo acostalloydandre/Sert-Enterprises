@@ -11,12 +11,10 @@
     max-width: 1184px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Gives slightly more room to the text on the right */
+    grid-template-columns: 1fr 1.2fr;
     gap: 60px;
     align-items: center;
 }
-
-/* ---------- Left Column Logo Container ---------- */
 
 .about-logo-box {
     width: 100%;
@@ -28,11 +26,10 @@
 
 .about-logo-img {
     width: 100%;
-    max-width: 380px; /* Controls max size of your logo */
+    max-width: 380px;
     height: auto;
     object-fit: contain;
     display: block;
-    /* Optional subtle hover effect */
     transition: transform 0.3s ease;
 }
 
@@ -40,7 +37,6 @@
     transform: scale(1.02);
 }
 
-/* ---------- Right Text Content ---------- */
 
 .about-label {
     display: inline-flex;
@@ -81,10 +77,6 @@
     margin-bottom: 0;
 }
 
-/* =========================================
-   RESPONSIVE BREAKPOINTS
-========================================= */
-
 @media (max-width: 1200px) {
     .about-container {
         max-width: 960px;
@@ -98,18 +90,18 @@
     }
 
     .about-container {
-        grid-template-columns: 1fr; /* Stacks logo above text on mobile/tablets */
+        grid-template-columns: 1fr;
         gap: 32px;
     }
 
     .about-logo-img {
-        max-width: 300px; /* Scales down logo nicely for smaller screens */
+        max-width: 300px;
     }
 }
 
 @media (max-width: 480px) {
     .about-section {
-        padding: 40px 16px; /* Safe mobile padding */
+        padding: 40px 16px;
     }
 
     .about-logo-box {

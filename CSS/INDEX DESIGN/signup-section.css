@@ -323,10 +323,9 @@
     line-height: 1.8;
 }
 
-/* ----- Smooth open / close ----- */
 
 .cx-accordion {
-    interpolate-size: allow-keywords;   /* lets height animate to "auto" */
+    interpolate-size: allow-keywords;
 }
 
 .cx-item::details-content {
@@ -344,10 +343,9 @@
     opacity: 1;
 }
 
-/* ----- Illustration at the bottom of the panel ----- */
 
 .cx-frame {
-    margin-top: auto;               /* pins it to the bottom */
+    margin-top: auto;             
     padding: 8px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -361,7 +359,7 @@
     aspect-ratio: 16 / 10;
     object-fit: cover;
     object-position: center 60%;
-    background: #1d5240;            /* shows while the image loads */
+    background: #1d5240;
     border-radius: 10px;
 }
 
