@@ -107,7 +107,7 @@
             <div class="banner-overlay"></div>
 
             <div class="hero-layout">
-                <!-- Heading, Tagline, Button -->
+                <!-- Content: Heading, Tagline, and Button -->
                 <div class="banner-content">
                     <span class="eyebrow">SERT Enterprise</span>
                     <h1 class="main-heading">Signage, Printing, and Interior/Fit-out Supply & Installation</span></h1>
@@ -121,9 +121,10 @@
                     <a href="#testimonials" class="reviews-link"> Read Our Customer Reviews <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
-                <!-- Hero Request Form -->
+
                 <div class="hero-form-wrapper">
-                    <form class="hero-contact-form" id="heroContactForm">
+                    <form class="hero-contact-form" id="heroContactForm"
+      action="./PHP/consultation_process.php" method="POST">
 
                         <span class="form-eyebrow">CONSULTATION REQUEST</span>
 
@@ -192,7 +193,7 @@
             <div class="logo-marquee">
                 <div class="logo-track" id="logoTrack">
         
-                    <!-- Partner logos -->
+                    <!-- Original set of partner logos -->
                     <div class="logo-item">
                         <img src="Assets/Customer Logo/2go.png" alt="2GO">
                     </div>
@@ -308,10 +309,10 @@
                 </p>
             </div>
 
-            <!-- Service Section -->
+            <!-- Service Cards -->
             <div class="projects-grid">
 
-                <!-- Large Format Print -->
+                <!-- Card 1 -->
                 <article class="project-card">
                     <img src="Assets/Services/largeprint.webp" alt="Exterior property identification sign"
                         class="project-image">
@@ -327,7 +328,7 @@
                     </div>
                 </article>
 
-                <!-- Panaflex Signage -->
+                <!-- Card 2 -->
                 <article class="project-card">
                     <img src="Assets/Services/panaflex.webp" alt="Interior office signage" class="project-image">
 
@@ -342,7 +343,7 @@
                     </div>
                 </article>
 
-                <!-- Acrylic Works -->
+                <!-- Card 3 -->
                 <article class="project-card">
                     <img src="Assets/Services/acrylic.webp" alt="Commercial property entrance sign"
                         class="project-image">
@@ -358,7 +359,7 @@
                     </div>
                 </article>
 
-                <!-- Metal Works -->
+                <!-- Card 4 -->
                 <article class="project-card">
                     <img src="Assets/Services/metal.webp" alt="Commercial vehicles with branded graphics"
                         class="project-image">
@@ -375,7 +376,7 @@
                 </article>
 
 
-                <!-- Wood Works -->
+                <!-- Card 5 -->
                 <article class="project-card">
                     <img src="Assets/Services/kiosk.webp" alt="Commercial vehicles with branded graphics"
                         class="project-image">
@@ -391,7 +392,8 @@
                     </div>
                 </article>
 
-                <!-- Window Blinds -->
+
+                <!-- Card 6 -->
                 <article class="project-card">
                     <img src="Assets/Services/blind1.webp" alt="Commercial vehicles with branded graphics"
                         class="project-image">
@@ -407,7 +409,8 @@
                     </div>
                 </article>
 
-                <!-- Carpets -->
+
+                <!-- Card 7 -->
                 <article class="project-card">
                     <img src="Assets/Services/carpet2.webp" alt="Commercial vehicles with branded graphics"
                         class="project-image">
@@ -423,7 +426,8 @@
                     </div>
                 </article>
 
-                <!-- Office Furniture and Partitions -->
+
+                <!-- Card 8 -->
                 <article class="project-card">
                     <img src="Assets/Services/cubicle.webp" alt="Commercial vehicles with branded graphics"
                         class="project-image">
@@ -441,12 +445,12 @@
             </div>
         </section>
 
-        <!-- Workflow Section -->
+        <!-- SERT ENTERPRISE WORKFLOW SECTION -->
         <section class="workflow-section pattern-bg">
 
             <div class="workflow-container">
 
-                <!-- Left: Introduction -->
+                <!-- LEFT: INTRODUCTION -->
                 <div class="workflow-intro">
 
                     <span class="workflow-label">OUR WORKFLOW</span>
@@ -472,10 +476,10 @@
 
                 </div>
 
-                <!-- Right: Workflow -->
+                <!-- RIGHT: WORKFLOW CARDS -->
                 <div class="workflow-grid">
 
-                    <!-- Step 1 -->
+                    <!-- STEP 1 -->
                     <article class="workflow-card">
                         <span class="workflow-number">01</span>
 
@@ -493,7 +497,7 @@
                         </span>
                     </article>
 
-                    <!-- Step 2 -->
+                    <!-- STEP 2 -->
                     <article class="workflow-card">
                         <span class="workflow-number">02</span>
 
@@ -511,7 +515,7 @@
                         </span>
                     </article>
 
-                    <!-- Step 3 -->
+                    <!-- STEP 3 -->
                     <article class="workflow-card">
                         <span class="workflow-number">03</span>
 
@@ -529,7 +533,7 @@
                         </span>
                     </article>
 
-                    <!-- Step 4 -->
+                    <!-- STEP 4 -->
                     <article class="workflow-card">
                         <span class="workflow-number">04</span>
 
@@ -553,7 +557,7 @@
         <section class="signup-section" id = "signup">
             <div class="signup-layout">
 
-                <!-- Left: Signup Form -->
+                <!-- LEFT: SIGNUP FORM -->
                 <div class="signup-card">
                     <div class="signup-header">
                         <h1>Create an Account</h1>
@@ -561,40 +565,40 @@
                             from the first order to the final delivery.</p>
                     </div>
 
-                    <form class="signup-form" action="#" method="post">
+                    <form class="signup-form" action="./PHP/register.php" method="POST">
 
                         <div class="form-group">
                             <label for="signup-email">Email address</label>
-                            <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email"
+                            <input type="email" id="signup-email" name="email" placeholder="Enter your email"
                                 autocomplete="email" required>
                         </div>
 
                         <div class="form-group">
                             <label for="signup-name">Name</label>
-                            <input type="text" id="signup-name" name="signup-name" placeholder="Enter your Full Name"
+                            <input type="text" id="signup-name" name="name" placeholder="Enter your Full Name"
                                 autocomplete="name" required>
                         </div>
 
                         <div class="form-group">
                             <label for="signup-password">Password</label>
-                            <input type="password" id="signup-password" name="signup-password"
+                            <input type="password" id="signup-password" name="password"
                                 placeholder="Create a password" autocomplete="new-password" minlength="8" required>
                         </div>
 
                         <div class="form-group">
                             <label for="signup-phone">Phone Number</label>
-                            <input type="tel" id="signup-phone" name="signup-phone" placeholder="Enter Phone Number"
+                            <input type="tel" id="signup-phone" name="phone" placeholder="Enter Phone Number"
                                 autocomplete="tel" required>
                         </div>
 
                         <div class="form-group">
                             <label for="signup-address">Address</label>
-                            <textarea id="signup-address" name="signup-address" placeholder="Enter Complete Address"
+                            <textarea id="signup-address" name="address" placeholder="Enter Complete Address"
                                 rows="3" autocomplete="street-address" required></textarea>
                         </div>
 
                         <label class="marketing-option">
-                            <input type="checkbox" name="marketing">
+                            <input type="checkbox" name="marketing-consent">
                             <span>
                                 I would like to receive updates, offers,
                                 and promotions.
@@ -613,12 +617,12 @@
 
                         <p class="login-prompt">
                             Already have an account?
-                            <a href="login.html">Log in</a>
+                            <a href="./HTML/login.html">Log in</a>
                         </p>
                     </form>
                 </div>
 
-                <!-- Right: Account Benefits -->
+                <!-- RIGHT: CUSTOMER ACCOUNT INFO (was the welcome panel) -->
                 <aside class="signup-info">
 
                     <img src="./Assets/Logo/logofigure.png" alt="SERT Enterprise Logo" class="signup-bg-logo">
@@ -679,7 +683,7 @@
                         </div>
                     </div>
 
-                    <!-- Illustration at the bottom of the right panel -->
+                    <!-- Illustration at the bottom of the panel -->
                     <div class="cx-frame">
                         <img src="Assets/Misc/cx-account.svg"
                             alt="Customer dashboard with project progress, delivery tracking and a status notification"
@@ -708,7 +712,7 @@
                     aria-label="Featured projects">
                     <div class="fw-track">
 
-                        <!-- Large Format Printing Project -->
+                        <!-- 1. Large Format Printing -->
                         <article class="fw-card">
                             <div class="fw-photo">
                                 <img src="Assets/Featured Works/largeprint.webp" alt="Large format printing project"
@@ -721,7 +725,7 @@
                             </div>
                         </article>
 
-                        <!-- Panaflex Signage Project -->
+                        <!-- 2. Panaflex Signage -->
                         <article class="fw-card">
                             <div class="fw-photo">
                                 <img src="Assets/Featured Works/panaflex.webp" alt="Panaflex signage project"
@@ -734,7 +738,7 @@
                             </div>
                         </article>
 
-                        <!-- Acrylic Works Project -->
+                        <!-- 3. Acrylic Works -->
                         <article class="fw-card">
                             <div class="fw-photo">
                                 <img src="Assets/Featured Works/acrylic.webp" alt="Acrylic works project" width="760"
@@ -747,7 +751,7 @@
                             </div>
                         </article>
 
-                        <!-- Metal Works Project -->
+                        <!-- 4. Metal Works -->
                         <article class="fw-card">
                             <div class="fw-photo">
                                 <img src="Assets/Featured Works/metal.webp" alt="Metal works project" width="760"
@@ -760,7 +764,7 @@
                             </div>
                         </article>
 
-                        <!-- Wood Works Project -->
+                        <!-- 5. Wood Works -->
                         <article class="fw-card">
                             <div class="fw-photo">
                                 <img src="Assets/Featured Works/wood.webp" alt="Wood works project" width="760"
@@ -773,7 +777,7 @@
                             </div>
                         </article>
 
-                        <!-- Window Blinds Project -->
+                        <!-- 6. Window Blinds -->
                         <article class="fw-card">
                             <div class="fw-photo">
                                 <img src="Assets/Featured Works/windowbinds.webp" alt="Window blinds project"
@@ -786,7 +790,7 @@
                             </div>
                         </article>
 
-                        <!-- Carpets Project -->
+                        <!-- 7. Carpets -->
                         <article class="fw-card">
                             <div class="fw-photo">
                                 <img src="Assets/Featured Works/carpets.webp" alt="Carpet installation project"
@@ -799,7 +803,7 @@
                             </div>
                         </article>
 
-                        <!-- Office Furniture & Partitions Project -->
+                        <!-- 8. Office Furniture & Partitions -->
                         <article class="fw-card">
                             <div class="fw-photo">
                                 <img src="Assets/Featured Works/office.webp"
@@ -822,10 +826,10 @@
             </div>
         </section>
 
-        <!-- Feedback Section -->
         <section class="feedback-section" id="testimonials">
             <div class="feedback-container">
 
+                <!-- Header -->
                 <div class="feedback-header">
                     <div class="feedback-heading">
                         <span class="feedback-label">TESTIMONIALS</span>
@@ -837,12 +841,13 @@
                     </p>
                 </div>
 
+                <!-- Cards -->
                 <div class="feedback-grid">
-                    <!-- Panaflex Signage Feedback -->
+
                     <article class="feedback-card">
 
                         <div class="feedback-media">
-                            <img src="Assets/Testimonials/panaflex signage.webp" alt="Panaflex Signage" loading="lazy">
+                            <img src="Assets/Testimonials/panaflex signage.webp" alt="Storefront Signage Project" loading="lazy">
                         </div>
 
                         <blockquote>
@@ -864,11 +869,10 @@
                         </footer>
                     </article>
 
-                    <!-- Metal Works Feedback -->
                     <article class="feedback-card">
 
                         <div class="feedback-media">
-                            <img src="Assets/Testimonials/metal works.webp" alt="Metal Works" loading="lazy">
+                            <img src="Assets/Testimonials/metal works.webp" alt="Storefront Signage Project" loading="lazy">
                         </div>
                         
                         <blockquote>
@@ -890,11 +894,10 @@
                         </footer>
                     </article>
 
-                    <!-- Office Furniture Feedback -->
                     <article class="feedback-card">
 
                         <div class="feedback-media">
-                            <img src="Assets/Testimonials/cubicle office.webp" alt="Office Cubicle Partition" loading="lazy">
+                            <img src="Assets/Testimonials/cubicle office.webp" alt="Storefront Signage Project" loading="lazy">
                         </div>
                         
                         <blockquote>
@@ -916,11 +919,10 @@
                         </footer>
                     </article>
 
-                    <!-- Large Print Format Feedback -->
                     <article class="feedback-card">
 
                         <div class="feedback-media">
-                            <img src="Assets/Testimonials/largeprint.webp" alt="Large Print Format" loading="lazy">
+                            <img src="Assets/Testimonials/largeprint.webp" alt="Storefront Signage Project" loading="lazy">
                         </div>
                         
                         <blockquote>
@@ -941,11 +943,10 @@
                         </footer>
                     </article>
 
-                    <!-- Acrylic Signage Feedback -->
                     <article class="feedback-card">
 
                         <div class="feedback-media">
-                            <img src="Assets/Testimonials/subaru logo.webp" alt="Acrylic Signage" loading="lazy">
+                            <img src="Assets/Testimonials/subaru logo.webp" alt="Storefront Signage Project" loading="lazy">
                         </div>
                         
                         <blockquote>
@@ -967,11 +968,10 @@
                         </footer>
                     </article>
 
-                    <!-- Window Blinds Feedback -->
                     <article class="feedback-card">
 
                         <div class="feedback-media">
-                            <img src="Assets/Testimonials/woodwork and window blinds.webp" alt="Window blinds" loading="lazy">
+                            <img src="Assets/Testimonials/woodwork and window blinds.webp" alt="Storefront Signage Project" loading="lazy">
                         </div>
                         
                         <blockquote>
@@ -999,7 +999,7 @@
 
         <section class="contact-section pattern-bg" id="contact">
             <div class="contact-container">
-              <!-- Left: Info and Description -->
+              <!-- Left Column: Info Cards & Description -->
               <div class="contact-info-col">
                 <span class="contact-eyebrow">SERT ENTERPRISE</span>
                 <h2 class="contact-heading">Let’s Plan Your Sign Project</h2>
@@ -1036,7 +1036,7 @@
                 </div>
               </div>
           
-              <!-- Right: Request Form-->
+              <!-- Right Column: Dark Form Box -->
               <div class="contact-form-wrapper">
                 <form class="contact-form">
                   <div class="form-group-contact">
@@ -1088,12 +1088,12 @@
         <section class="about-section" id="about">
             <div class="about-container">
               
-              <!-- Left: Company Logo -->
+              <!-- Left Column: Company Logo -->
               <div class="about-logo-box">
                 <img src="Assets/Logo/Metallic SERT Enterprise Emblem.png" alt="SERT Enterprise Logo" class="about-logo-img"/>
               </div>
           
-              <!-- Right: Company Background -->
+              <!-- Right Column: Content & Story -->
               <div class="about-content">
                 <h2 class="about-heading">About Us</h2>
                 
@@ -1117,13 +1117,14 @@
     <footer class="site-footer">
         <div class="footer-container">
           
-          <!-- Top: Map & Link Columns -->
+          <!-- Top Row: Map & Link Columns -->
           <div class="footer-top-grid">
             
-            <!-- Google Map Location -->
+            <!-- Column 1: Google Map Location (Replaces Logo + Bio) -->
             <div class="footer-col footer-map-col">
               <h4 class="footer-col-title">Our Location</h4>
               <div class="footer-map-wrapper">
+                <!-- Replace src URL with your actual Google Maps embed iframe link -->
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.225419109183!2d121.1628191!3d14.5862272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b97085e079c5%3A0xd1c94de2a49baa3b!2sMicrologic%20Systems%2C%20Inc.!5e0!3m2!1sen!2sph!4v1792567518981!5m2!1sen!2sph" 
                   width="100%" 
@@ -1136,7 +1137,7 @@
               </div>
             </div>
       
-            <!-- Explore Links -->
+            <!-- Column 2: Explore -->
             <div class="footer-col">
               <h4 class="footer-col-title">Explore</h4>
               <ul class="footer-links">
@@ -1148,7 +1149,7 @@
               </ul>
             </div>
       
-            <!-- Priority Projects -->
+            <!-- Column 3: Priority Projects -->
             <div class="footer-col">
               <h4 class="footer-col-title">Priority Projects</h4>
               <ul class="footer-links">
@@ -1160,7 +1161,7 @@
               </ul>
             </div>
       
-            <!-- Industries -->
+            <!-- Column 4: Industries -->
             <div class="footer-col">
               <h4 class="footer-col-title">Industries</h4>
               <ul class="footer-links">
@@ -1174,7 +1175,7 @@
       
           </div>
       
-          <!-- Middle: Log In Panel Box -->
+          <!-- Middle Row: CTA Banner Box -->
           <div class="footer-cta-card">
             <div class="footer-cta-text">
               <span class="footer-cta-sub">LET'S BUILD SOMETHING VISIBLE</span>
@@ -1183,7 +1184,7 @@
             <a href="./HTML/login.html" class="footer-cta-btn">Log in now &rarr;</a>
           </div>
       
-          <!-- Contact -->
+          <!-- Contact Quick Cards -->
           <div class="footer-info-cards">
             
             <div class="info-card">
@@ -1215,7 +1216,7 @@
       
           </div>
       
-          <!-- Bottom: Copyright and Button-top -->
+          <!-- Bottom Bar: Copyright & Back to Top -->
           <div class="footer-bottom-bar">
             <p>&copy; 2026 SERT Enterprise. All rights reserved.</p>
             <a href="#top" class="back-to-top-btn">Back to top &uarr;</a>
@@ -1225,4 +1226,5 @@
       </footer>
     <script src="JS/index.js"></script>
 </body>
+
 </html>
