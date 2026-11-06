@@ -199,3 +199,188 @@
   border-radius: inherit;
   background: #5b9874;
 }
+
+/* ================================================================= */
+/* RESPONSIVE DESIGN - MONTH CALENDAR                                */
+/* ================================================================= */
+
+/* Large Tablets / Small Desktops - 1200px */
+@media (max-width: 1200px) {
+
+  .calendar-panel {
+      padding-bottom: 12px;
+  }
+
+  .day {
+      min-height: 36px;
+      padding: 5px;
+  }
+
+  .calendar-legend {
+      gap: 8px 10px;
+  }
+
+  .calendar-project-tooltip {
+      width: min(280px, calc(100vw - 30px));
+  }
+}
+
+
+/* Tablets - 900px */
+@media (max-width: 900px) {
+
+  .calendar-heading {
+      margin-bottom: 12px;
+  }
+
+  .calendar-controls button {
+      width: 30px;
+      height: 30px;
+  }
+
+  .calendar-toolbar {
+      font-size: 10px;
+  }
+
+  .weekday {
+      min-height: 30px;
+      font-size: 9px;
+  }
+
+  .day {
+      min-height: 42px;
+      padding: 6px;
+      font-size: 10px;
+  }
+
+  .day.selected span {
+      width: 20px;
+      height: 20px;
+  }
+
+  .event-dot {
+      bottom: 5px;
+      left: 6px;
+      width: 5px;
+      height: 5px;
+  }
+
+  .calendar-legend {
+      font-size: 9px;
+      gap: 9px 12px;
+  }
+
+  .calendar-project-tooltip {
+      width: min(290px, calc(100vw - 32px));
+  }
+}
+
+
+/* Mobile Devices - 480px */
+@media (max-width: 480px) {
+
+  .calendar-panel {
+      padding-bottom: 10px;
+  }
+
+  .calendar-heading {
+      margin-bottom: 10px;
+  }
+
+  /* Calendar Controls */
+  .calendar-controls {
+      gap: 6px;
+  }
+
+  .calendar-controls button {
+      width: 28px;
+      height: 28px;
+      font-size: 17px;
+  }
+
+  .calendar-toolbar {
+      font-size: 8px;
+      gap: 8px;
+      flex-wrap: wrap;
+  }
+
+  .today-label {
+      gap: 5px;
+  }
+
+  /* Calendar Grid */
+  .calendar-grid {
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      width: 100%;
+  }
+
+  .weekday {
+      min-height: 27px;
+      font-size: 7px;
+      letter-spacing: 0;
+  }
+
+  .day {
+      min-height: 36px;
+      padding: 5px 3px;
+      font-size: 8px;
+  }
+
+  .day.selected span {
+      width: 18px;
+      height: 18px;
+      margin: -3px 0 0 -2px;
+  }
+
+  .event-dot {
+      bottom: 4px;
+      left: 4px;
+      width: 4px;
+      height: 4px;
+  }
+
+  /* Calendar Legend */
+  .calendar-legend {
+      gap: 7px 10px;
+      padding-top: 8px;
+      font-size: 7px;
+  }
+
+  .calendar-legend span {
+      gap: 4px;
+  }
+
+  .calendar-legend i {
+      width: 5px;
+      height: 5px;
+  }
+
+  /* Project Tooltip */
+  .calendar-project-tooltip {
+      width: calc(100vw - 24px);
+      max-width: 290px;
+      padding: 12px;
+      border-radius: 8px;
+  }
+
+  .calendar-project-tooltip .tooltip-date {
+      font-size: 8px;
+  }
+
+  .calendar-project-tooltip .tooltip-project strong {
+      font-size: 10px;
+  }
+
+  .calendar-project-tooltip .tooltip-meta {
+      font-size: 8px;
+  }
+
+  .calendar-project-tooltip .tooltip-phase {
+      font-size: 8px;
+      gap: 6px;
+  }
+
+  .calendar-project-tooltip .tooltip-progress {
+      height: 5px;
+  }
+}

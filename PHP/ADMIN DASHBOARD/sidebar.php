@@ -38,23 +38,19 @@ try {
     <img src="../../Assets/Logo/logofigure.png" class="brand-logo brand-logo-small" alt="SERT Enterprise">
   </div>
 
-  <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true">
-      <span class="toggle-arrow">‹</span>
-  </button>
+  <button class="sidebar-toggle" id="sidebarToggle"
+        type="button"
+        aria-label="Collapse sidebar"
+        aria-expanded="true">
+        <span class="toggle-arrow">‹</span>
+    </button>
 
   <div class="sidebar-label">WORKSPACE</div>
   <nav class="main-nav" aria-label="Main navigation">
     <a class="nav-link <?php echo ($currentPage == 'admin-dashboard.php') ? 'active' : ''; ?>" href="admin-dashboard.php">
-      <span class="nav-icon">▦</span><span class="nav-text">Dashboard</span>
+      <span class="nav-icon">⊞</span><span class="nav-text">Dashboard</span>
     </a>
-    
-    <!-- Premade Orders Badge -->
-    <a class="nav-link <?php echo ($currentPage == 'orders.php') ? 'active' : ''; ?>" href="orders.php">
-      <span class="nav-icon">▤</span><span class="nav-text">Orders</span> 
-      <?php if ($orderCount > 0): ?>
-        <span class="nav-count"><?php echo $orderCount; ?></span>
-      <?php endif; ?>
-    </a>
+  
 
     <!-- Custom Orders Badge -->
     <a class="nav-link <?php echo ($currentPage == 'custom-orders.php') ? 'active' : ''; ?>" href="custom-orders.php">
@@ -67,12 +63,9 @@ try {
     <a class="nav-link <?php echo ($currentPage == 'projects.php') ? 'active' : ''; ?>" href="projects.php">
       <span class="nav-icon">▣</span><span class="nav-text">Projects</span>
     </a>
-    <a class="nav-link <?php echo ($currentPage == 'products.php') ? 'active' : ''; ?>" href="products.php">
-      <span class="nav-icon">◇</span><span class="nav-text">Products</span>
-    </a>
     <a class="nav-link <?php echo ($currentPage == 'customers.php') ? 'active' : ''; ?>" href="customers.php">
       <span class="nav-icon">♙</span><span class="nav-text">Customers</span>
-    </a>
+    </a> 
 
     <!-- Messages Badge -->
     <a class="nav-link <?php echo ($currentPage == 'messages.php') ? 'active' : ''; ?>" href="messages.php">
@@ -105,3 +98,4 @@ try {
     </div>
   </div>
 </aside>
+<div class="mobile-sidebar-overlay"></div>

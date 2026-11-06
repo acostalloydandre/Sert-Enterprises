@@ -1,0 +1,254 @@
+/* --- Admin-Matched Calendar Styles --- */
+.calendar-panel {
+    width: 100%;
+    padding: 28px 32px;
+    margin-bottom: 30px;
+  }
+  
+  .calendar-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  
+  .calendar-nav-bar h2 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--green-dark);
+  }
+  
+  .calendar-nav-btns {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .cal-btn {
+    padding: 8px 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  
+  .cal-btn:hover {
+    background: var(--canvas);
+    border-color: var(--green);
+  }
+  
+  .calendar-action-btn {
+    padding: 8px 14px;
+    background: var(--green);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .calendar-action-btn:hover {
+    background: var(--green-dark);
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  
+  .cal-header-day {
+    text-align: center;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--muted);
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
+  
+  .cal-cell {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    min-height: 110px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cal-cell.other-month {
+    background: #fafafa;
+    opacity: 0.4;
+  }
+  
+  .cal-cell.today {
+    border-color: var(--green);
+    background: #f0fdf4;
+  }
+  
+  .cal-day-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  
+  .cal-events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+    max-height: 75px;
+  }
+  
+  .cal-event-pill {
+    background: var(--green);
+    color: #fff;
+    font-size: 9px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+  }
+
+  
+/* =====================================
+   RESPONSIVE CALENDAR
+===================================== */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1200px) {
+  .calendar-panel {
+      padding: 24px;
+  }
+
+  .calendar-grid {
+      gap: 6px;
+  }
+
+  .cal-cell {
+      min-height: 95px;
+      padding: 8px;
+  }
+
+  .cal-events-list {
+      max-height: 65px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .calendar-panel {
+      padding: 20px;
+  }
+
+  .calendar-nav-bar {
+      gap: 12px;
+      flex-wrap: wrap;
+  }
+
+  .cal-cell {
+      min-height: 85px;
+      padding: 6px;
+  }
+
+  .cal-day-num {
+      font-size: 11px;
+  }
+
+  .cal-event-pill {
+      font-size: 8px;
+      padding: 3px 4px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .calendar-panel {
+      padding: 14px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+  }
+
+  .calendar-nav-bar {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  .calendar-nav-bar h2 {
+      font-size: 14px;
+  }
+
+  .calendar-nav-btns {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 6px;
+  }
+
+  .cal-btn,
+  .calendar-action-btn {
+      padding: 7px 10px;
+      font-size: 10px;
+  }
+
+  .calendar-grid {
+      min-width: 520px;
+      gap: 5px;
+  }
+
+  .cal-header-day {
+      font-size: 9px;
+      padding: 8px 0;
+  }
+
+  .cal-cell {
+      min-height: 75px;
+      padding: 5px;
+      border-radius: 6px;
+  }
+
+  .cal-day-num {
+      font-size: 10px;
+      margin-bottom: 4px;
+  }
+
+  .cal-events-list {
+      max-height: 50px;
+      gap: 3px;
+  }
+
+  .cal-event-pill {
+      font-size: 7px;
+      padding: 3px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .calendar-panel {
+      padding: 10px;
+  }
+
+  .calendar-grid {
+      min-width: 480px;
+  }
+
+  .calendar-nav-btns {
+      gap: 4px;
+  }
+
+  .cal-btn,
+  .calendar-action-btn {
+      font-size: 9px;
+      padding: 6px 8px;
+  }
+}

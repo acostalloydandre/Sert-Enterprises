@@ -1,0 +1,299 @@
+/* --- SERT Enterprise Client Portal Stylesheet --- */
+
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* --- Balanced Request Project Form --- */
+  .request-form-panel {
+    width: 100%;
+    padding: 28px 32px;
+    margin-bottom: 30px;
+  }
+  
+  .request-form-heading {
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 12px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-row-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 11px;
+    color: var(--green-dark);
+  }
+  
+  .form-label small {
+    color: var(--muted);
+    font-weight: normal;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 12px;
+    background: #fff;
+    font-family: inherit;
+    color: var(--ink);
+  }
+  
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .file-input-wrap {
+    margin-bottom: 28px;
+  }
+  
+  .file-input {
+    padding: 8px 0;
+    font-size: 12px;
+  }
+  
+  .file-help-text {
+    display: block;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  
+  .submit-btn {
+    padding: 12px 28px;
+    background: var(--green);
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .submit-btn:hover {
+    background: var(--green-dark);
+  }
+  
+  .alert-success {
+    padding: 14px;
+    background: #ecfdf5;
+    border: 1px solid #10b981;
+    color: #065f46;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .alert-error {
+    padding: 14px;
+    background: #fef2f2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  /* --- Status Filter Buttons & Overrides --- */
+  .status-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .status-pill-btn:hover {
+    background: var(--canvas);
+    border-color: var(--green);
+  }
+
+  
+/* =====================================
+   RESPONSIVE CLIENT PORTAL
+===================================== */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1200px) {
+    .request-form-panel {
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+
+    .form-row-grid {
+        gap: 18px;
+    }
+
+    .request-form-heading {
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .request-form-panel {
+        padding: 20px;
+    }
+
+    .form-row-grid {
+        gap: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: 11px;
+        font-size: 12px;
+    }
+
+    .form-textarea {
+        min-height: 110px;
+    }
+
+    .submit-btn {
+        padding: 11px 24px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    .app-shell {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .main-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .request-form-panel {
+        width: 100%;
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+
+    .request-form-heading {
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+    }
+
+    /* Change two columns into one */
+    .form-row-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-label {
+        font-size: 11px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        width: 100%;
+        min-width: 0;
+        padding: 11px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
+
+    .form-textarea {
+        min-height: 110px;
+    }
+
+    .file-input-wrap {
+        margin-bottom: 20px;
+    }
+
+    .file-input {
+        width: 100%;
+        max-width: 100%;
+        font-size: 11px;
+    }
+
+    .file-help-text {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 13px;
+        font-size: 12px;
+    }
+
+    .alert-success,
+    .alert-error {
+        padding: 12px;
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .status-pill-btn {
+        font-size: 10px;
+        padding: 7px 10px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+    .request-form-panel {
+        padding: 12px;
+    }
+
+    .request-form-heading {
+        margin-bottom: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+    }
+
+    .alert-success,
+    .alert-error {
+        padding: 10px;
+        font-size: 10px;
+    }
+}

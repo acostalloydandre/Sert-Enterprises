@@ -529,3 +529,364 @@ td small {
   font-size: 9px;
   text-align: center;
 }
+
+
+/* =========================================
+   SERT ENTERPRISE - ADMIN DASHBOARD
+   RESPONSIVE DESIGN
+========================================= */
+
+
+/* =========================================
+   1200px - SMALL DESKTOP / LAPTOP
+========================================= */
+@media screen and (max-width: 1200px) {
+
+  .main-content {
+      margin-left: 248px;
+      padding: 24px 22px;
+  }
+
+  .summary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+  }
+
+  .content-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+  }
+
+  .lower-grid {
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  }
+
+  .stat-card {
+      min-height: 120px;
+  }
+
+  .page-heading h1 {
+      font-size: 24px;
+  }
+
+  .search-box {
+      width: 210px;
+  }
+
+  .panel {
+      padding: 15px;
+  }
+}
+
+
+/* =========================================
+ 900px - TABLET / SMALL LAPTOP
+========================================= */
+@media screen and (max-width: 900px) {
+
+  .main-content {
+      margin-left: 0;
+      padding: 20px;
+      width: 100%;
+  }
+
+  .topbar {
+      flex-wrap: wrap;
+      gap: 14px;
+  }
+
+  .topbar-actions {
+      gap: 8px;
+      flex-wrap: wrap;
+  }
+
+  .search-box {
+      width: 200px;
+  }
+
+  .page-heading h1 {
+      font-size: 22px;
+  }
+
+  .summary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+  }
+
+  .content-grid,
+  .lower-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+  }
+
+  .stat-card {
+      min-height: 115px;
+      padding: 13px;
+  }
+
+  .stat-value {
+      font-size: 24px;
+  }
+
+  .panel {
+      padding: 16px;
+  }
+
+  .panel-heading h2 {
+      font-size: 14px;
+  }
+
+  .attention-item {
+      min-height: 55px;
+  }
+
+  .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+      min-width: 600px;
+  }
+}
+
+
+/* =========================================
+ 480px - MOBILE PHONES
+========================================= */
+@media screen and (max-width: 480px) {
+
+  /* Main Layout */
+  .main-content {
+      margin-left: 0;
+      padding: 14px 12px;
+      width: 100%;
+  }
+
+  /* Topbar */
+  .topbar {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 14px;
+      margin-bottom: 18px;
+  }
+
+  .page-heading h1 {
+      font-size: 21px;
+      letter-spacing: -0.5px;
+  }
+
+  .eyebrow {
+      font-size: 8px;
+      letter-spacing: 1px;
+  }
+
+  .welcome {
+      font-size: 10px;
+  }
+
+  .topbar-actions {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+  }
+
+  .search-box {
+      width: 100%;
+      flex: 1 1 100%;
+      height: 36px;
+      order: 1;
+  }
+
+  .search-box kbd {
+      display: none;
+  }
+
+  .icon-button {
+      width: 35px;
+      height: 35px;
+      font-size: 17px;
+  }
+
+  .profile-button {
+      flex: 1;
+      min-width: 0;
+      padding: 4px 7px;
+  }
+
+  .profile-button small {
+      font-size: 9px;
+  }
+
+  .avatar {
+      width: 28px;
+      height: 28px;
+  }
+
+  /* Summary Cards */
+  .summary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+      margin-bottom: 12px;
+  }
+
+  .stat-card {
+      min-height: 108px;
+      padding: 11px;
+      border-radius: 9px;
+  }
+
+  .stat-icon {
+      width: 26px;
+      height: 26px;
+      font-size: 14px;
+  }
+
+  .stat-tag {
+      padding: 4px 5px;
+      font-size: 7px;
+  }
+
+  .stat-label {
+      margin-top: 10px;
+      font-size: 9px;
+  }
+
+  .stat-value {
+      font-size: 22px;
+      letter-spacing: -0.5px;
+  }
+
+  .stat-foot {
+      font-size: 8px;
+  }
+
+  /* Dashboard Panels */
+  .content-grid,
+  .lower-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+      margin-bottom: 12px;
+  }
+
+  .panel {
+      padding: 13px;
+      border-radius: 9px;
+  }
+
+  .panel-heading {
+      gap: 8px;
+      margin-bottom: 12px;
+  }
+
+  .panel-heading h2 {
+      font-size: 13px;
+  }
+
+  .panel-heading .eyebrow {
+      font-size: 7px;
+  }
+
+  .text-link {
+      font-size: 9px;
+  }
+
+  /* Attention List */
+  .attention-item {
+      min-height: 53px;
+      gap: 8px;
+  }
+
+  .attention-symbol {
+      width: 26px;
+      height: 26px;
+      font-size: 11px;
+  }
+
+  .attention-copy strong {
+      font-size: 9px;
+  }
+
+  .attention-copy small {
+      font-size: 8px;
+  }
+
+  .status-pill {
+      padding: 4px 6px;
+      font-size: 7px;
+  }
+
+  .row-arrow {
+      font-size: 14px;
+  }
+
+  /* Tables */
+  .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+      min-width: 600px;
+  }
+
+  th {
+      padding: 8px;
+      font-size: 8px;
+  }
+
+  td {
+      padding: 10px 8px;
+      font-size: 8px;
+  }
+
+  td strong {
+      font-size: 8px;
+  }
+
+  td small {
+      font-size: 7px;
+  }
+
+  /* Messages */
+  .message-item {
+      gap: 7px;
+      padding: 10px 0;
+  }
+
+  .message-copy strong {
+      font-size: 9px;
+  }
+
+  .message-copy small {
+      font-size: 8px;
+  }
+
+  .message-item time {
+      font-size: 7px;
+  }
+
+  .compose-link {
+      font-size: 9px;
+  }
+
+  /* Progress */
+  .progress-cell {
+      gap: 5px;
+      min-width: 70px;
+  }
+
+  .progress {
+      width: 40px;
+  }
+
+  /* Footer */
+  .footer {
+      font-size: 8px;
+      padding-top: 10px;
+  }
+}
+

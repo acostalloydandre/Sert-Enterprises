@@ -120,12 +120,10 @@ require_once __DIR__ . './dashboard-data.php';
             <div class="weekday">SAT</div>
 
             <?php
-            // Output empty offset slots before the 1st of the month
             for ($i = 0; $i < $firstDayOfWeek; $i++) {
               echo '<div class="day muted"><span></span></div>';
             }
 
-            // Loop through all days of the current active month automatically
             for ($d = 1; $d <= $totalDaysInMonth; $d++) {
               $dateString = sprintf("%s-%s-%02d", $currentYear, $currentMonth, $d);
               $isToday = ($d === $currentDay);

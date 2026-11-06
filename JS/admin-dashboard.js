@@ -1,19 +1,72 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
     // SIDEBAR TOGGLE
     const sidebarToggle = document.getElementById("sidebarToggle");
+    const mobileOverlay = document.querySelector(".mobile-sidebar-overlay");
 
     if (sidebarToggle) {
+
         sidebarToggle.addEventListener("click", function () {
-            document.body.classList.toggle("sidebar-collapsed");
-            const isCollapsed = document.body.classList.contains("sidebar-collapsed");
-            sidebarToggle.setAttribute("aria-expanded", !isCollapsed);
-            sidebarToggle.setAttribute(
-                "aria-label",
-                isCollapsed ? "Expand sidebar" : "Collapse sidebar"
-            );
+
+            if (window.innerWidth <= 480) {
+
+                // MOBILE SIDEBAR
+                document.body.classList.toggle("mobile-sidebar-open");
+
+                const isOpen = document.body.classList.contains("mobile-sidebar-open");
+
+                sidebarToggle.setAttribute("aria-expanded", isOpen);
+                sidebarToggle.setAttribute(
+                    "aria-label",
+                    isOpen ? "Close sidebar" : "Open sidebar"
+                );
+
+            } else {
+
+                // DESKTOP SIDEBAR
+                document.body.classList.toggle("sidebar-collapsed");
+
+                const isCollapsed = document.body.classList.contains("sidebar-collapsed");
+
+                sidebarToggle.setAttribute("aria-expanded", !isCollapsed);
+                sidebarToggle.setAttribute(
+                    "aria-label",
+                    isCollapsed ? "Expand sidebar" : "Collapse sidebar"
+                );
+
+            }
+
         });
+
     }
+
+    // CLOSE MOBILE SIDEBAR WHEN CLICKING OUTSIDE
+    if (mobileOverlay) {
+
+        mobileOverlay.addEventListener("click", function () {
+
+            document.body.classList.remove("mobile-sidebar-open");
+
+            if (sidebarToggle) {
+                sidebarToggle.setAttribute("aria-expanded", "false");
+                sidebarToggle.setAttribute("aria-label", "Open sidebar");
+            }
+
+        });
+
+    }
+
+    // RESET MOBILE SIDEBAR WHEN RESIZING TO DESKTOP
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 480) {
+
+            document.body.classList.remove("mobile-sidebar-open");
+
+        }
+
+    });
 
 
     // CALENDAR PROJECT HOVER DETAILS

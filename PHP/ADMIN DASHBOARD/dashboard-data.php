@@ -24,7 +24,7 @@ try {
 $newOrdersCount = 0;
 $pendingQuotesCount = 0;
 $activeProjectsCount = 0;
-$scheduledActivitiesCount = 0;
+$pendingSiteVisitsCount = 0;
 
 $attentionItems = [];
 $activeProjects = [];
@@ -52,11 +52,12 @@ if ($pdo) {
         $activeProjectsCount = isset($row['total']) ? (int)$row['total'] : 0;
     } catch (PDOException $e) { $activeProjectsCount = 0; }
 
+    // Replaced scheduled activities count with Pending Site Visits query
     try {
-        $stmt = $pdo->query("SELECT COUNT(*) as total FROM calendar_events");
+        $stmt = $pdo->query("SELECT COUNT(*) as total FROM calendar_events WHERE event_type LIKE '%site visit%' OR phase LIKE '%site visit%'");
         $row = $stmt->fetch();
-        $scheduledActivitiesCount = isset($row['total']) ? (int)$row['total'] : 0;
-    } catch (PDOException $e) { $scheduledActivitiesCount = 0; }
+        $pendingSiteVisitsCount = isset($row['total']) ? (int)$row['total'] : 0;
+    } catch (PDOException $e) { $pendingSiteVisitsCount = 0; }
 
     // B. Priority Tasks / Attention Items
     try {
@@ -101,7 +102,6 @@ $atRiskCount = 0;
 $ordersLastWeekCount = 0;
 
 if ($pdo) {
-    // Count On Track vs At Risk projects dynamically from the database
     try {
         $stmt = $pdo->query("SELECT status, COUNT(*) as total FROM projects GROUP BY status");
         while ($row = $stmt->fetch()) {
@@ -116,7 +116,6 @@ if ($pdo) {
         $atRiskCount = 0; 
     }
 
-    // Count new orders from last week dynamically 
     try {
         $stmt = $pdo->query("SELECT COUNT(*) as total FROM orders WHERE order_date >= DATE_SUB(NOW(), INTERVAL 7 DAY)");
         $row = $stmt->fetch();
@@ -126,7 +125,7 @@ if ($pdo) {
     }
 }
 
-// --- 4. BUILD SUMMARY CARDS ARRAY WITH DYNAMIC SUBTEXTS ---
+// --- 4. BUILD SUMMARY CARDS ARRAY WITH PENDING SITE VISITS CARD ---
 $summaryCards = [
     [
         'icon' => '▤', 'icon_color' => 'orange', 'tag' => 'Needs review', 'tag_class' => 'tag-orange',
@@ -144,9 +143,9 @@ $summaryCards = [
         'foot' => '<span class="trend">' . $onTrackCount . '</span> on track · ' . $atRiskCount . ' at risk'
     ],
     [
-        'icon' => '◷', 'icon_color' => 'blue', 'tag' => 'This week', 'tag_class' => 'tag-blue',
-        'label' => 'Scheduled Activities', 'value' => $scheduledActivitiesCount, 
-        'foot' => 'Site visits, delivery & installation'
+        'icon' => '◷', 'icon_color' => 'blue', 'tag' => 'Action required', 'tag_class' => 'tag-blue',
+        'label' => 'Pending Site Visits', 'value' => $pendingSiteVisitsCount, 
+        'foot' => 'Awaiting scheduling & confirmation'
     ]
 ];
 
@@ -156,13 +155,10 @@ $currentMonth = date('m');
 $currentMonthName = date('F');
 $currentMonthYearHeading = date('F Y');
 $todayToolbarLabel = 'Today, ' . date('F j');
-$totalDaysInMonth = (int)date('t'); // Auto-detects 28, 29, 30, or 31 days
+$totalDaysInMonth = (int)date('t');
 $currentDay = (int)date('j');
-
-// Find which day of the week the 1st falls on (0 = Sunday, 1 = Monday, etc.)
 $firstDayOfWeek = (int)date('w', strtotime("$currentYear-$currentMonth-01"));
 
-// Helper function to map phase string to CSS dot classes
 if (!function_exists('getDotClass')) {
     function getDotClass($phase) {
         $phaseLower = strtolower($phase);

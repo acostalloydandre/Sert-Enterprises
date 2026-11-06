@@ -13,3 +13,39 @@
     background-size: 60px 103.92px;
     background-repeat: repeat;
   }
+
+  /* ================================================================= */
+/* RESPONSIVE DESIGN - GLOBAL PAGE BACKGROUND                        */
+/* ================================================================= */
+
+/* Large Tablets / Small Desktops - 1200px */
+@media (max-width: 1200px) {
+
+  body {
+      background-size: 55px 95.26px;
+  }
+}
+
+
+/* Tablets - 900px */
+@media (max-width: 900px) {
+
+  body {
+      background-size: 50px 86.60px;
+  }
+}
+
+
+/* Mobile Devices - 480px */
+@media (max-width: 480px) {
+
+  html {
+      scroll-behavior: smooth;
+  }
+
+  body {
+      min-height: 100vh;
+      background-size: 40px 69.28px;
+      background-position: center top;
+  }
+}

@@ -227,3 +227,231 @@
   .custom-empty-state p {
     font-size: 13px;
   }
+
+  
+/* =========================================
+   RESPONSIVE DESIGN
+   SERT - CUSTOM ORDERS & SERVICES
+========================================= */
+
+
+/* =========================================
+   1200px - SMALL DESKTOP / LAPTOP
+========================================= */
+@media screen and (max-width: 1200px) {
+
+  .orders-master-layout,
+  .custom-orders-layout {
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 18px;
+  }
+
+  .custom-directory-panel {
+      padding: 16px;
+  }
+
+  .custom-detail-panel {
+      padding: 24px;
+  }
+
+  .custom-record-header h2 {
+      font-size: 19px;
+  }
+
+  .custom-active-spec-card {
+      padding: 16px;
+  }
+
+  .category-pill {
+      padding: 7px 14px;
+      font-size: 11px;
+  }
+}
+
+
+/* =========================================
+ 900px - TABLET / SMALL LAPTOP
+========================================= */
+@media screen and (max-width: 900px) {
+
+  .orders-master-layout,
+  .custom-orders-layout {
+      grid-template-columns: 1fr;
+      gap: 16px;
+  }
+
+  .custom-directory-panel {
+      padding: 18px;
+  }
+
+  .custom-detail-panel {
+      padding: 20px;
+      min-height: auto;
+  }
+
+  .custom-client-list-wrap {
+      max-height: 350px;
+  }
+
+  .custom-record-header {
+      margin-bottom: 18px;
+  }
+
+  .custom-record-header h2 {
+      font-size: 18px;
+  }
+
+  .custom-active-spec-card {
+      gap: 16px;
+      padding: 16px;
+      margin-bottom: 22px;
+  }
+
+  .category-pills-bar {
+      gap: 8px;
+      margin-bottom: 16px;
+  }
+
+  .category-pill {
+      padding: 7px 13px;
+      font-size: 11px;
+  }
+
+  .custom-empty-state {
+      padding: 70px 16px;
+  }
+}
+
+
+/* =========================================
+ 480px - MOBILE PHONES
+========================================= */
+@media screen and (max-width: 480px) {
+
+  .orders-master-layout,
+  .custom-orders-layout {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+  }
+
+  /* Category Filter */
+  .category-pills-bar {
+      gap: 7px;
+      margin-top: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+  }
+
+  .category-pill {
+      padding: 7px 12px;
+      font-size: 10px;
+      flex-shrink: 0;
+  }
+
+  /* Requester Directory */
+  .custom-directory-panel {
+      padding: 14px;
+      min-width: 0;
+  }
+
+  .custom-directory-header {
+      margin-bottom: 12px;
+  }
+
+  .custom-directory-eyebrow {
+      font-size: 9px;
+  }
+
+  .custom-directory-title {
+      font-size: 15px;
+  }
+
+  .custom-directory-subtitle {
+      font-size: 11px;
+      margin-bottom: 12px;
+  }
+
+  .custom-client-list-wrap {
+      max-height: 280px;
+      gap: 6px;
+  }
+
+  .custom-client-link {
+      padding: 10px;
+      gap: 8px;
+  }
+
+  .custom-client-link strong {
+      font-size: 12px;
+  }
+
+  .custom-client-link small {
+      font-size: 10px;
+  }
+
+  .custom-client-link span {
+      font-size: 10px;
+  }
+
+  /* Details Panel */
+  .custom-detail-panel {
+      padding: 15px;
+      min-height: auto;
+  }
+
+  .custom-record-header {
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+  }
+
+  .custom-record-header h2 {
+      font-size: 16px;
+  }
+
+  .custom-section-heading {
+      font-size: 10px;
+      margin-bottom: 8px;
+  }
+
+  /* Active Specification Card */
+  .custom-active-spec-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px;
+      margin-bottom: 18px;
+  }
+
+  .custom-active-spec-details strong {
+      font-size: 13px;
+  }
+
+  .custom-active-spec-details p {
+      font-size: 11px;
+  }
+
+  .custom-active-spec-pricing {
+      text-align: left;
+      width: 100%;
+      padding-top: 10px;
+      border-top: 1px solid #e2e8f0;
+  }
+
+  .custom-active-spec-pricing .amount-text {
+      font-size: 13px;
+  }
+
+  /* Empty State */
+  .custom-empty-state {
+      padding: 50px 12px;
+  }
+
+  .custom-empty-state h3 {
+      font-size: 16px;
+  }
+
+  .custom-empty-state p {
+      font-size: 11px;
+  }
+}

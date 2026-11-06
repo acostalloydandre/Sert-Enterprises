@@ -175,3 +175,185 @@
 .empty-orders-state p {
     font-size: 13px;
 }
+
+/* ================================================================= */
+/* RESPONSIVE DESIGN - ORDERS PAGE                                   */
+/* ================================================================= */
+
+/* Large Tablets / Small Desktops - 1200px */
+@media (max-width: 1200px) {
+
+    .orders-master-layout {
+        grid-template-columns: 300px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .directory-panel {
+        padding: 18px;
+    }
+
+    .content-detail-panel {
+        padding: 24px;
+    }
+
+    .active-order-card {
+        padding: 16px;
+    }
+}
+
+
+/* Tablets - 900px */
+@media (max-width: 900px) {
+
+    .orders-master-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .directory-panel {
+        padding: 18px;
+    }
+
+    .client-list-wrap {
+        max-height: 350px;
+    }
+
+    .content-detail-panel {
+        padding: 24px;
+        min-height: 400px;
+    }
+
+    .client-record-header {
+        margin-bottom: 20px;
+    }
+
+    .active-order-section {
+        margin-bottom: 24px;
+    }
+
+    .active-order-card {
+        gap: 16px;
+    }
+
+    .empty-orders-state {
+        padding: 70px 20px;
+    }
+}
+
+
+/* Mobile Devices - 480px */
+@media (max-width: 480px) {
+
+    .orders-master-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    /* Directory Panel */
+    .directory-panel {
+        padding: 14px;
+    }
+
+    .directory-header {
+        margin-bottom: 12px;
+    }
+
+    .directory-eyebrow {
+        font-size: 9px;
+    }
+
+    .directory-title {
+        font-size: 15px;
+    }
+
+    .directory-subtitle {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+
+    .client-list-wrap {
+        max-height: 280px;
+        gap: 6px;
+    }
+
+    .client-item-link {
+        padding: 9px 10px;
+        gap: 8px;
+    }
+
+    .client-item-link strong {
+        font-size: 12px;
+    }
+
+    .client-item-link small {
+        font-size: 10px;
+    }
+
+    .client-item-link span {
+        font-size: 11px;
+    }
+
+    /* Content Detail Panel */
+    .content-detail-panel {
+        padding: 16px;
+        min-height: 350px;
+    }
+
+    .client-record-header {
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+    }
+
+    .client-record-header h2 {
+        font-size: 17px;
+    }
+
+    /* Active Order */
+    .active-order-section {
+        margin-bottom: 20px;
+    }
+
+    .section-label-heading {
+        font-size: 10px;
+    }
+
+    .active-order-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .active-order-details strong {
+        font-size: 13px;
+    }
+
+    .active-order-details p {
+        font-size: 11px;
+    }
+
+    .active-order-pricing {
+        text-align: left;
+        width: 100%;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 10px;
+    }
+
+    .active-order-pricing .amount-text {
+        font-size: 13px;
+    }
+
+    /* Empty State */
+    .empty-orders-state {
+        padding: 55px 12px;
+    }
+
+    .empty-orders-state h3 {
+        font-size: 16px;
+    }
+
+    .empty-orders-state p {
+        font-size: 12px;
+    }
+}

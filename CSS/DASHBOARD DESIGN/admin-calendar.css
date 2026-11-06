@@ -1,0 +1,353 @@
+/* ================================================================= */
+/* SERT Enterprise - Full-Page Calendar Module Stylesheet           */
+/* ================================================================= */
+
+.full-calendar-panel {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid var(--line, #e2e8f0);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .full-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-auto-rows: minmax(130px, 1fr); 
+    border-top: 1px solid var(--line, #e2e8f0);
+    border-left: 1px solid var(--line, #e2e8f0);
+    margin-top: 16px;
+  }
+  
+  .full-calendar-grid .weekday {
+    min-height: 45px;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid var(--line, #e2e8f0);
+    border-bottom: 1px solid var(--line, #e2e8f0);
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: #f8fafc;
+  }
+  
+  .full-calendar-grid .day {
+    position: relative;
+    padding: 12px;
+    border-right: 1px solid var(--line, #e2e8f0);
+    border-bottom: 1px solid var(--line, #e2e8f0);
+    color: #1e293b;
+    font-size: 13px;
+    background: #ffffff;
+  }
+  
+  .full-calendar-grid .day.muted {
+    color: #cbd5e1;
+    background: #fafafa;
+  }
+  
+  .full-calendar-grid .day.selected {
+    background: #f0fdf4;
+    color: #059669;
+    font-weight: 800;
+  }
+  
+  .full-calendar-grid .day.selected > span {
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #059669;
+    color: #fff;
+  }
+  
+  .full-calendar-grid .day.has-event {
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  
+  .full-calendar-grid .day.has-event:hover {
+    background: #f1f5f9;
+  }
+  
+  /* Event badges rendered inside calendar cells */
+  .calendar-cell-event {
+    margin-top: 6px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    transition: transform 0.1s ease;
+  }
+  
+  .calendar-cell-event:hover {
+    transform: translateY(-1px);
+  }
+  
+  .calendar-cell-event.planning { background: #fdf6ed; color: #cc8534; border-left: 3px solid #cc8534; }
+  .calendar-cell-event.designing { background: #f5f3ff; color: #8b71cc; border-left: 3px solid #8b71cc; }
+  .calendar-cell-event.development { background: #eff6ff; color: #518cca; border-left: 3px solid #518cca; }
+  .calendar-cell-event.site-visit { background: #fef2f2; color: #cd6554; border-left: 3px solid #cd6554; }
+  .calendar-cell-event.installation { background: #ecfdf5; color: #459871; border-left: 3px solid #459871; }
+  .calendar-cell-event.delivery { background: #fefce8; color: #d69e2e; border-left: 3px solid #d69e2e; }
+  
+  /* --- ENLARGED CALENDAR LEGEND STYLES --- */
+  .calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    padding-top: 18px;
+    margin-top: 8px;
+    border-top: 1px solid #f1f5f9;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .calendar-legend span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .calendar-legend i {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  
+  /* --- ENLARGED CALENDAR HEADER & CONTROLS --- */
+  .full-calendar-panel .calendar-heading h2 {
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin-top: 2px;
+  }
+  
+  .full-calendar-panel .calendar-heading .eyebrow {
+    font-size: 11px !important;
+    letter-spacing: 0.8px;
+  }
+  
+  .full-calendar-panel .calendar-controls {
+    gap: 8px;
+  }
+  
+  .full-calendar-panel .calendar-controls button {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 22px !important;
+    border-radius: 8px !important;
+    display: grid;
+    place-items: center;
+    transition: background 0.15s ease;
+  }
+  
+  .full-calendar-panel .calendar-controls button:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+  }
+  
+  .full-calendar-panel .calendar-toolbar {
+    font-size: 12px !important;
+    color: #64748b !important;
+    margin-bottom: 14px;
+  }
+  
+  .full-calendar-panel .calendar-toolbar .today-label i {
+    width: 8px;
+    height: 8px;
+  }
+
+  
+/* =========================================
+   RESPONSIVE DESIGN - SERT FULL CALENDAR
+========================================= */
+
+/* =========================================
+   1200px - SMALL DESKTOP / LAPTOP
+========================================= */
+@media screen and (max-width: 1200px) {
+
+  .full-calendar-panel {
+      padding: 20px;
+  }
+
+  .full-calendar-grid {
+      grid-auto-rows: minmax(115px, 1fr);
+  }
+
+  .full-calendar-grid .day {
+      padding: 10px;
+      font-size: 12px;
+  }
+
+  .calendar-cell-event {
+      padding: 5px 7px;
+      font-size: 10px;
+  }
+
+  .full-calendar-panel .calendar-heading h2 {
+      font-size: 20px !important;
+  }
+
+  .calendar-legend {
+      gap: 12px 18px;
+      font-size: 12px;
+  }
+}
+
+
+/* =========================================
+ 900px - TABLET / SMALL LAPTOP
+========================================= */
+@media screen and (max-width: 900px) {
+
+  .full-calendar-panel {
+      padding: 16px;
+  }
+
+  .full-calendar-panel .calendar-heading h2 {
+      font-size: 18px !important;
+  }
+
+  .full-calendar-panel .calendar-controls {
+      gap: 5px;
+  }
+
+  .full-calendar-panel .calendar-controls button {
+      width: 32px !important;
+      height: 32px !important;
+      font-size: 18px !important;
+  }
+
+  .full-calendar-grid {
+      grid-auto-rows: minmax(100px, 1fr);
+  }
+
+  .full-calendar-grid .weekday {
+      min-height: 38px;
+      font-size: 10px;
+      letter-spacing: 0;
+  }
+
+  .full-calendar-grid .day {
+      padding: 7px;
+      font-size: 11px;
+  }
+
+  .full-calendar-grid .day.selected > span {
+      width: 23px;
+      height: 23px;
+  }
+
+  .calendar-cell-event {
+      padding: 4px 5px;
+      font-size: 9px;
+      margin-top: 4px;
+  }
+
+  .calendar-legend {
+      gap: 10px 14px;
+      font-size: 11px;
+  }
+
+  .calendar-legend span {
+      gap: 6px;
+  }
+}
+
+
+/* =========================================
+ 480px - MOBILE PHONES
+========================================= */
+@media screen and (max-width: 480px) {
+
+  .full-calendar-panel {
+      padding: 12px;
+      overflow-x: auto;
+  }
+
+  .full-calendar-panel .calendar-heading h2 {
+      font-size: 16px !important;
+  }
+
+  .full-calendar-panel .calendar-heading .eyebrow {
+      font-size: 9px !important;
+  }
+
+  .full-calendar-panel .calendar-controls {
+      gap: 4px;
+  }
+
+  .full-calendar-panel .calendar-controls button {
+      width: 28px !important;
+      height: 28px !important;
+      font-size: 16px !important;
+      border-radius: 6px !important;
+  }
+
+  /* Allow horizontal scrolling for the 7-day calendar */
+  .full-calendar-grid {
+      width: max-content;
+      min-width: 100%;
+      grid-template-columns: repeat(7, minmax(65px, 1fr));
+      grid-auto-rows: minmax(85px, 1fr);
+      margin-top: 12px;
+  }
+
+  .full-calendar-grid .weekday {
+      min-height: 34px;
+      font-size: 9px;
+  }
+
+  .full-calendar-grid .day {
+      padding: 5px;
+      font-size: 10px;
+  }
+
+  .full-calendar-grid .day.selected > span {
+      width: 21px;
+      height: 21px;
+      font-size: 10px;
+  }
+
+  .calendar-cell-event {
+      padding: 3px 4px;
+      font-size: 8px;
+      border-left-width: 2px;
+      margin-top: 3px;
+  }
+
+  .calendar-legend {
+      gap: 9px 12px;
+      padding-top: 12px;
+      font-size: 10px;
+  }
+
+  .calendar-legend span {
+      gap: 5px;
+  }
+
+  .calendar-legend i {
+      width: 8px;
+      height: 8px;
+  }
+
+  .full-calendar-panel .calendar-toolbar {
+      font-size: 10px !important;
+      margin-bottom: 10px;
+  }
+}
