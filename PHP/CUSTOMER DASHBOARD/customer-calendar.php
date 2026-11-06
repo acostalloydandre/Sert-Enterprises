@@ -42,7 +42,7 @@ if ($nextMonth > 12) { $nextMonth = 1; $nextYear++; }
       <header class="topbar">
         <div class="page-heading">
           <p class="eyebrow">SERT ENTERPRISE / CLIENT PORTAL</p>
-          <h1>Project Schedule & Calendar</h1>
+          <h1>Calendar</h1>
           <p class="welcome">Track your upcoming site visits, order placements, and project completion milestones.</p>
         </div>
         <div class="topbar-actions">

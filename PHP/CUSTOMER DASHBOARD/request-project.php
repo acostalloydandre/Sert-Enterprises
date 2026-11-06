@@ -30,7 +30,7 @@ $initials = (count($nameParts) >= 2) ? strtoupper(substr($nameParts[0], 0, 1) . 
       <header class="topbar">
         <div class="page-heading">
           <p class="eyebrow">SERT ENTERPRISE / CLIENT PORTAL</p>
-          <h1>Request a New Project / Quotation</h1>
+          <h1>Request a New Project</h1>
           <p class="welcome">Submit your exact specifications, sizing, and design references for evaluation.</p>
         </div>
         <div class="topbar-actions">
